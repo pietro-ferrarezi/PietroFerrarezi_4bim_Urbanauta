@@ -1,4 +1,4 @@
-# NOME (ainda não escolhido)
+    # URBANAUTA
 ## Plataforma de divulgação e gerenciamento de iniciativas ambientais em comunidades locais.
 
 ## 1. Visão geral
@@ -22,6 +22,7 @@ O software tem como objetivo reunir essas informações em um só lugar, tornand
 - Estudantes das escolas locais
 - Coletivos e organizações comunitárias
 - Equipe responsável pela gestão
+- Público majoritariamente jovem
 
 ### 2.2. Perfis de usuários
 | Perfil | Descrição | Responsabilidades |
@@ -61,7 +62,7 @@ O software tem como objetivo reunir essas informações em um só lugar, tornand
 ### F. Gerenciamento de categorias
 - **Objetivo**: agrupar projetos em categorias distintas.
 - **Usuários**: administradores.
-- **Funcionamento**: criar categorias com nome e descrição.
+- **Funcionamento**: criar categorias com nomes diferentes.
 
 ### G. Participação em projetos
 - **Objetivo**: permitir que moradores demonstrem interesse em colaborar.
@@ -69,3 +70,5 @@ O software tem como objetivo reunir essas informações em um só lugar, tornand
 - **Funcionamento**: o usuário seleciona a opção de participar e registra uma manifestação de interesse ou assina a petição.
 - **Regras**: Solicitações poderão ser aceitas, recusadas ou marcadas como concluídas (exceção de abaixo-assinados).
 
+## 4. Banco de Dados
+![DER](./Documentação/DER.png)
