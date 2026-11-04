@@ -1,4 +1,4 @@
-    # URBANAUTA
+# URBANAUTA
 ## Plataforma de divulgação e gerenciamento de iniciativas ambientais em comunidades locais.
 
 ## 1. Visão geral
