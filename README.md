@@ -28,7 +28,8 @@ O software tem como objetivo reunir essas informações em um só lugar, tornand
 | Perfil | Descrição | Responsabilidades |
 | --- | --- | --- |
 | Visitante | Usuário sem sessão autenticada | Explorar o catálogo e consultar informações |
-| Cliente | Usuário cadastrado na plataforma | Gerenciar seu perfil e inscrever-se em iniciativas |
+| Voluntário | Usuário cadastrado na plataforma | Gerenciar seu perfil e inscrever-se em iniciativas |
+| Colaborador | Voluntário que pode criar novas iniciativas | Pode enviar novas propostas de projetos, ativadades e propor petições |
 | Administrador | Integrante autorizado da equipe de gestão | Gerenciar iniciativas |
 
 ## 3. Funcionalidades
