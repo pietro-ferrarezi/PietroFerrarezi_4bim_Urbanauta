@@ -29,8 +29,9 @@ O software tem como objetivo reunir essas informações em um só lugar, tornand
 | --- | --- | --- |
 | Visitante | Usuário sem sessão autenticada | Explorar o catálogo e consultar informações |
 | Voluntário | Usuário cadastrado na plataforma | Gerenciar seu perfil e inscrever-se em iniciativas |
-| Colaborador | Voluntário que podem criar novas iniciativas | Enviar novas propostas de projetos, atividades e propor petições |
-| Administrador | Integrante autorizado da equipe de gestão | Gerenciar iniciativas |
+| Colaborador | Voluntários | Enviar novas propostas de projetos, atividades e propor petições |
+| Administrador | Integrante autorizado da equipe de gestão | Gerenciar iniciativas e adicionar colaboradores |
+
 
 ## 3. Funcionalidades
 ### A. Catálogo
