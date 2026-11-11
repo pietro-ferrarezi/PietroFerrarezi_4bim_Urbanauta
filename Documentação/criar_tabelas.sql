@@ -85,7 +85,7 @@ CREATE TABLE public.Manifestacao_Interesse (
     FOREIGN KEY (ID_ESTADO) REFERENCES public.Estado_Manifestacao(ID_ESTADO_MANIS)
 );
 
-CREATE TABLE  public.Participacao (
+CREATE TABLE public.Participacao (
     ID_PARTICIPACAO SERIAL PRIMARY KEY,
     data_confirmacao TIMESTAMP NOT NULL,
     ID_MANIFESTACAO INT UNIQUE NOT NULL,

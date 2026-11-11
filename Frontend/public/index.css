@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --base-black: #000;
+    --second-black: #0A0A0C;
+    --base-white: #f0edff;
+    --highlight1: #c8ff00;
+    --highlight2: #304bff;
+    --highlight3: #ff5a24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+*::selection {
+    background-color: var(--highlight1);
+    color: var(--second-black);
+}
+
+body {
+    background-color: var(--base-white);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--second-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2%;
+    color: var(--base-white);
+    height: 10vh;
+}
+
+.brand {
+    text-decoration: none;
+    color: var(--base-white);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: large;
+    flex: 1;
+}
+
+.brandname--highlight {
+    color: var(--highlight1);
+}
+
+.menu {
+    display: flex;
+    margin-inline: 5%;
+    gap: 2.5vw;
+}
+
+.menu__item {
+    cursor: pointer;
+    transition: all 0.2s linear;
+    text-underline-offset: 8px;
+}
+.menu__item:hover {
+    text-decoration: underline;
+    color: var(--highlight1);
+}
+.menu__item--selected {
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--highlight1);
+}
+
+.primary-btt {
+    background-color: var(--highlight1);
+    color: var(--base-black);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: "Inter";
+    font-size: medium;
+    padding-block: 10px;
+    padding-inline: 25px;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+.primary-btt:hover {
+    background-color: var(--highlight3);
+}

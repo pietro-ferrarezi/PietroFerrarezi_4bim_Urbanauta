@@ -1,0 +1,79 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome__hero {
+    display: flex;
+    background-color: var(--base-black);
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.hero__left {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vw;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.hero__btt {
+    margin-left: 3vw;
+    transition: all 0.1s ease-out;
+}
+
+.hero__btt:hover {
+    transform: translateX(5px);
+}
+
+.welcome__features {
+    display: flex;
+    background-color: var(--base-black);
+    color: var(--base-white);
+    align-items: center;
+    padding-block: 4vh;
+}
+.features__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.features__item:not(:first-child) {
+    border-left: 1px solid white;
+}
+.f__item__imagem {
+    margin-left: 10%;
+}
+.f__item__imagem img {
+    width: 60px;
+}
+.f__item__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 5%;
+}
+
+.i__content__title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.i__content__description {
+    font-size: 0.8rem;
+}
+
+.projetos {
+    background-color: var(--base-white);
+    color: var(--second-black);
+    height: 80vh;
+    padding: 3%;
+}
+.projetos h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.6rem;
+    width: fit-content;
+    background-color: var(--highlight1);
+    color: var(--second-black);
+}
