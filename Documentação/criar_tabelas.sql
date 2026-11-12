@@ -1,3 +1,4 @@
+-- Active: 1788443360522@@127.0.0.1@5432@urbanauta@public
 DROP TABLE IF EXISTS Participacao, Manifestacao_Interesse, Assinatura, Peticao, Responsavel_Iniciativa, Iniciativa, Projeto, Categoria, Estado_Atividade, Estado_Manifestacao, Estado_Participacao, Voluntario, Colaborador, Usuario; 
 
 CREATE TABLE public.Usuario (
