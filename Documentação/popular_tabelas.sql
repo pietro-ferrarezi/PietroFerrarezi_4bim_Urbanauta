@@ -51,6 +51,7 @@ VALUES (
         'aline.martins@example.com',
         '$2b$12$g3DXKr/JV/sFe6zi9ighdu3WVocB6nSigRfYYvAD5dvvVKgl/aZ9W'
     );
+-- SENHA PADRÃO: Urbanauta@Teste2026
 
 -- 2. PERFIS: usuarios 4 e 5 tem os dois papeis.
 -- Usuarios 1, 2 e 3: apenas voluntarios; 6 e 7: apenas colaboradores.
