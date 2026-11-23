@@ -1,23 +1,32 @@
--- Active: 1794921996763@@127.0.0.1@5432@urbanauta
-DROP TABLE IF EXISTS Participacao, Manifestacao_Interesse, Assinatura, Peticao, Responsavel_Iniciativa, Iniciativa, Projeto, Categoria, Estado_Atividade, Estado_Manifestacao, Estado_Participacao, Voluntario, Colaborador, Usuario; 
+-- Active: 1793153335742@@127.0.0.1@5432@sistema_urbanauta
+DROP TABLE IF EXISTS Participacao, Manifestacao_Interesse, Assinatura, Peticao, Responsavel_Iniciativa, Iniciativa, Projeto, Categoria, Estado_Atividade, Estado_Manifestacao, Estado_Participacao, Voluntario, Colaborador, Administrador , Usuario CASCADE;  
 
 CREATE TABLE public.Usuario (
     ID_USUARIO SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    email TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
     senha TEXT NOT NULL
 );
 
 CREATE TABLE public.Voluntario (
     ID_VOLUNTARIO SERIAL PRIMARY KEY,
     ID_USUARIO INT UNIQUE NOT NULL,
-    FOREIGN KEY (ID_USUARIO) REFERENCES public.Usuario(ID_USUARIO)
+    FOREIGN KEY (ID_USUARIO)
+        REFERENCES public.Usuario(ID_USUARIO)
 );
 
 CREATE TABLE public.Colaborador (
     ID_COLABORADOR SERIAL PRIMARY KEY,
-    ID_USUARIO INT UNIQUE NOT NULL,
-    FOREIGN KEY (ID_USUARIO) REFERENCES public.Usuario(ID_USUARIO)
+    ID_VOLUNTARIO INT UNIQUE NOT NULL,
+    FOREIGN KEY (ID_VOLUNTARIO)
+        REFERENCES public.Voluntario(ID_VOLUNTARIO)
+);
+
+CREATE TABLE public.Administrador (
+    ID_ADMINISTRADOR SERIAL PRIMARY KEY,
+    ID_VOLUNTARIO INT UNIQUE NOT NULL,
+    FOREIGN KEY (ID_VOLUNTARIO)
+        REFERENCES public.Voluntario(ID_VOLUNTARIO)
 );
 
 CREATE TABLE public.Categoria (
@@ -41,6 +50,7 @@ CREATE TABLE public.Estado_Participacao (
 CREATE TABLE public.Projeto (
     ID_PROJETO SERIAL PRIMARY KEY,
     titulo VARCHAR(100) NOT NULL,
+    lead VARCHAR(150) NOT NULL,
     descricao VARCHAR(500),
     ID_CATEGORIA INT NOT NULL,
     ID_ESTADO INT NOT NULL,

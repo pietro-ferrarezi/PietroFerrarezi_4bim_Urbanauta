@@ -40,6 +40,37 @@ header {
     height: 10vh;
 }
 
+.btt-login {
+    background-color: transparent;
+    color: var(--base-white);
+
+    border: 1px solid #777780;
+    border-radius: 3px;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.15rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+    padding: 8px 22px;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.btt-login:hover {
+    background-color: var(--highlight1);
+    color: var(--second-black);
+    border-color: var(--highlight1);
+}
+
+.btt-login:focus-visible {
+    outline: 2px solid var(--highlight1);
+    outline-offset: 3px;
+}
+
 .brand {
     text-decoration: none;
     color: var(--base-white);
@@ -54,30 +85,61 @@ header {
 
 .menu {
     display: flex;
-    margin-inline: 5%;
+    margin-inline: 3%;
     gap: 2.5vw;
 }
 
 .menu__item {
+    position: relative;
     cursor: pointer;
-    transition: all 0.2s linear;
-    text-underline-offset: 8px;
+    transition: color 0.2s ease;
+    padding-inline: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
+
+/* Barrinha */
+.menu__item::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: var(--highlight1);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.1s linear;
+}
+
+/* Hover */
 .menu__item:hover {
-    text-decoration: underline;
-    color: var(--highlight1);
+    background-color: var(--highlight1);
+    color: var(--second-black);
 }
+
+.menu__item:hover::after {
+    transform: scaleX(1);
+}
+
+/* Página selecionada */
 .menu__item--selected {
     font-weight: bold;
-    text-decoration: underline;
     color: var(--highlight1);
+}
+
+.menu__item--selected::after {
+    transform: scaleX(1);
 }
 
 .primary-btt {
     background-color: var(--highlight1);
     color: var(--base-black);
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: bold;
     font-family: "Inter";
     font-size: medium;

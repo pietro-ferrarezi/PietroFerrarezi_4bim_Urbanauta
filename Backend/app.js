@@ -8,19 +8,11 @@ import session from "express-session"
 import pgSession from "connect-pg-simple"
 const PostgreSQLStore = pgSession(session);
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import cors from "cors"
-const corsOptions = {
-    origin: "*",
-    optionsSuccessStatus: 200
-}
-
 const app = express()
 app.use(express.json())
-app.use(cors(corsOptions))
 app.use(express.static(path.join(__dirname, "..", "Frontend", "public")))
 app.use(
   session({
