@@ -4,20 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Urbanauta - Cadastro</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/auth/auth.css">
   </head>
-  <body>
-    <form id="loginForm">
-      <label for="email">Nome</label>
-      <input type="text" name="nome" id="nome" />
-      <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" />
-      <label for="senha">Senha</label>
-      <input type="password" name="senha" id="senha" />
-      <button type="submit">Cadastrar</button>
+ <body class="auth-page">
 
-      <a href="/login">Já tenho uma conta</a>
-    </form>
+    <main class="auth-layout">
+
+        <aside class="auth-brand">
+            <a href="/" class="auth-logo">
+                <span>URBAN</span>AUTA.
+            </a>
+
+            <div class="auth-brand__content">
+                <span class="auth-decoration"></span>
+
+                <h1>A CIDADE NÃO MUDA SOZINHA.</h1>
+
+                <p>
+                    Conecte-se com pessoas que transformam
+                    ideias em ações. Sua cidade precisa de você.
+                </p>
+            </div>
+
+            <span class="auth-brand__footer">
+                #FAÇAPARTE
+            </span>
+        </aside>
+
+        <section class="auth-panel">
+            <div class="auth-container">
+
+                <span class="auth-eyebrow">
+                    FAÇA PARTE / 02
+                </span>
+
+                <h2>CRIE SUA CONTA</h2>
+
+                <p class="auth-subtitle">
+                    Seu primeiro passo para transformar a cidade.
+                </p>
+
+                <form id="loginForm" class="auth-form">
+
+                    <div class="auth-field">
+                        <label for="nome">NOME COMPLETO</label>
+                        <input
+                            type="text"
+                            name="nome"
+                            id="nome"
+                            placeholder="Como podemos te chamar?"
+                            autocomplete="name"
+                            required
+                        />
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="email">E-MAIL</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                        />
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="senha">SENHA</label>
+                        <input
+                            type="password"
+                            name="senha"
+                            id="senha"
+                            placeholder="Crie uma senha"
+                            autocomplete="new-password"
+                            required
+                        />
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="senhaconf">CONFIRMAR SENHA</label>
+                        <input
+                            type="password"
+                            name="senhaconf"
+                            id="senhaconf"
+                            placeholder="Repita sua senha"
+                            autocomplete="new-password"
+                            required
+                        />
+                    </div>
+
+                    <button type="submit" class="auth-submit">
+                        CADASTRAR <span aria-hidden="true">→</span>
+                    </button>
+
+                    <p class="auth-switch">
+                        Já tem uma conta?
+                        <a href="/login">Entrar</a>
+                    </p>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
 
     <script src="/auth/cadastrar.js"></script>
-  </body>
+</body>
 </html>

@@ -1,35 +1,50 @@
-document.querySelector("#loginForm").addEventListener("submit", async (e) => {
-    e.preventDefault()
 
-    const email = document.querySelector("#email").value
-    const senha = document.querySelector("#senha").value
+const form = document.querySelector("#loginForm");
 
-    if(!email.trim() || !senha) {
-        return console.log("Credenciais Inválidas")
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector("#email").value.trim();
+    const senha = document.querySelector("#senha").value;
+
+    if (!email || !senha) {
+        alert("Preencha seu e-mail e sua senha.");
+        return;
     }
 
-    const sucessLogin = await login(email, senha)
+    const botao = form.querySelector('button[type="submit"]');
+    botao.disabled = true;
 
-    if(!sucessLogin) {
-        return console.log("Login não realizado!")
+    try {
+        const sucesso = await login(email, senha);
+
+        if (!sucesso) {
+            alert("E-mail ou senha inválidos.");
+            return;
+        }
+
+        window.location.href = "/voluntario";
+
+    } catch (erro) {
+        console.error("Erro no login:", erro);
+        alert("Não foi possível conectar ao servidor.");
+    } finally {
+        botao.disabled = false;
     }
-
-    console.log("Login!")
-    window.location.href = "/"
-})
+});
 
 async function login(email, senha) {
-    const result = await fetch("/usuarios/auth", {
+    const resposta = await fetch("/usuarios/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ email: email, pass: senha})
-    })
+        credentials: "same-origin",
+        body: JSON.stringify({
+            email: email,
+            pass: senha
+        })
+    });
 
-    if(result.status !== 200) {
-        return false
-    }
-
-    return true
+    return resposta.ok;
 }

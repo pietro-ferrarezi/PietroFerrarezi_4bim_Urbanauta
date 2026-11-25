@@ -85,20 +85,124 @@ const logout = async (req, res) => {
 
 const me = async (req, res) => {
   try {
-    if(!req.session.userId) {
-      res.status(401).json({ message: "Usuário não logado" })
+    if (!req.session.userId) {
+      return res.status(401).json({ message: "Usuário não logado" });
     }
-    const result = await pool.query("SELECT ID_USUARIO, nome, email FROM Usuario WHERE ID_USUARIO = $1", [req.session.userId])
+    const result = await pool.query(
+      "SELECT ID_USUARIO, nome, email FROM Usuario WHERE ID_USUARIO = $1",
+      [req.session.userId],
+    );
 
-    if(result.rows.length === 0) {
-      res.status(401).json({ message: "Usuário não encontrado" })
+    if (result.rows.length === 0) {
+      return res.status(401).json({ message: "Usuário não encontrado" });
     }
 
-    res.status(200).json({ user: result.rows[0] })
-  } catch(err) {
-    console.log(err.message)
-    res.status(500).json({ message: "Erro interno no servidor" })
+    res.status(200).json({ user: result.rows[0] });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).json({ message: "Erro interno no servidor" });
   }
-}
+};
 
-export default { auth, logout, me };
+const cadastrarVoluntario = async (req, res) => {
+  const { nome, email, pass } = req.body;
+
+  // Validar os dados recebidos
+  if (
+    typeof nome !== "string" ||
+    typeof email !== "string" ||
+    typeof pass !== "string" ||
+    !nome.trim() ||
+    !email.trim() ||
+    pass.length < 8
+  ) {
+    return res.status(400).json({
+      message: "Dados inválidos. A senha deve ter pelo menos 8 caracteres.",
+    });
+  }
+
+  const nomeFormatado = nome.trim();
+  const emailFormatado = email.trim().toLowerCase();
+
+  const client = await pool.connect();
+
+  try {
+    // Iniciar transação
+    await client.query("BEGIN");
+
+    // Gerar hash da senha
+    const senhaHash = await bcrypt.hash(pass, 12);
+
+    // Inserir usuário
+    const usuario = await client.query(
+      `INSERT INTO Usuario (nome, email, senha)
+             VALUES ($1, $2, $3)
+             RETURNING ID_USUARIO, nome, email`,
+      [nomeFormatado, emailFormatado, senhaHash],
+    );
+
+    const novoUsuario = usuario.rows[0];
+
+    // Inserir voluntário vinculado ao usuário
+    const voluntario = await client.query(
+      `INSERT INTO Voluntario (ID_USUARIO)
+             VALUES ($1)
+             RETURNING ID_VOLUNTARIO`,
+      [novoUsuario.id_usuario],
+    );
+
+    // Confirmar as duas inserções
+    await client.query("COMMIT");
+
+    req.session.regenerate((err) => {
+      if (err) {
+        console.error("Erro ao criar sessão:", err);
+
+        return res.status(500).json({
+          message: "Cadastro realizado, mas houve um erro ao iniciar sessão",
+        });
+      }
+
+      req.session.userId = novoUsuario.id_usuario;
+
+      req.session.save((err) => {
+        if (err) {
+          console.error("Erro ao salvar sessão:", err);
+
+          return res.status(500).json({
+            message: "Cadastro realizado, mas houve um erro ao iniciar sessão",
+          });
+        }
+
+        return res.status(201).json({
+          message: "Cadastro realizado com sucesso!",
+          user: {
+            id: novoUsuario.id_usuario,
+            nome: novoUsuario.nome,
+            email: novoUsuario.email,
+          },
+          id_voluntario: voluntario.rows[0].id_voluntario,
+        });
+      });
+    });
+  } catch (err) {
+    await client.query("ROLLBACK");
+
+    console.error("Erro ao cadastrar voluntário:", err);
+
+    // Violação de restrição UNIQUE do PostgreSQL
+    if (err.code === "23505") {
+      return res.status(409).json({
+        message: "Email já cadastrado",
+      });
+    }
+
+    return res.status(500).json({
+      message: "Erro interno ao cadastrar voluntário",
+    });
+  } finally {
+    client.release();
+  }
+};
+
+export default { auth, logout, me, cadastrarVoluntario };

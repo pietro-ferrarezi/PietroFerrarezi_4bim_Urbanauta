@@ -1,0 +1,317 @@
+/* ===== ESTRUTURA GERAL ===== */
+
+.auth-page {
+    min-height: 100vh;
+}
+
+.auth-layout {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 100vh;
+}
+
+/* ===== PAINEL ESQUERDO ===== */
+
+.auth-brand {
+    background-color: var(--second-black);
+    color: var(--base-white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 45px 7%;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+
+    color: var(--base-white);
+    text-decoration: none;
+    width: fit-content;
+    z-index: 1;
+}
+
+.auth-logo span {
+    color: var(--highlight1);
+}
+
+.auth-brand__content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+}
+
+.auth-decoration {
+    display: block;
+    background-color: var(--highlight1);
+
+    width: 65px;
+    height: 6px;
+    margin-bottom: 25px;
+}
+
+.auth-brand h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+    font-weight: normal;
+    line-height: 0.95;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.auth-brand__content p {
+    color: #bcbac9;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 360px;
+}
+
+.auth-brand__footer {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--highlight1);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+/* Detalhe gráfico discreto */
+
+.auth-brand::after {
+    content: "URBANAUTA";
+    position: absolute;
+    bottom: 8%;
+    right: -25%;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 13rem;
+    color: #ffffff07;
+
+    transform: rotate(-90deg);
+    pointer-events: none;
+}
+
+/* ===== PAINEL DO FORMULÁRIO ===== */
+
+.auth-panel {
+    background-color: var(--base-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 8%;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+.auth-eyebrow {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--highlight2);
+
+    margin-bottom: 12px;
+}
+
+.auth-container h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+    font-size: 3.5rem;
+    line-height: 1;
+    letter-spacing: 0.5px;
+
+    color: var(--second-black);
+    margin-bottom: 12px;
+}
+
+.auth-subtitle {
+    color: #62616a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    margin-bottom: 32px;
+}
+
+/* ===== FORMULÁRIO ===== */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth-field label {
+    color: var(--second-black);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.auth-field input {
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 14px 15px;
+
+    background-color: #fff;
+    color: var(--second-black);
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+
+    border: 1px solid var(--second-black);
+    border-radius: 3px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.auth-field input::placeholder {
+    color: #92909a;
+}
+
+.auth-field input:focus {
+    border-color: var(--highlight2);
+    box-shadow: 3px 3px 0 var(--highlight2);
+}
+
+/* ===== LINK RECUPERAR SENHA ===== */
+
+.auth-forgot {
+    align-self: flex-end;
+    color: var(--highlight2);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    margin-top: -5px;
+}
+
+.auth-forgot:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ===== BOTÃO PRINCIPAL ===== */
+
+.auth-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 14px 20px;
+
+    background-color: var(--highlight1);
+    color: var(--second-black);
+
+    border: 1px solid var(--second-black);
+    border-radius: 3px;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+}
+
+.auth-submit span {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+
+    transition: transform 0.15s ease;
+}
+
+.auth-submit:hover {
+    background-color: var(--highlight3);
+    box-shadow: 4px 4px 0 var(--highlight2);
+    transform: translate(-2px, -2px);
+}
+
+.auth-submit:hover span {
+    transform: translateX(5px);
+}
+
+.auth-submit:active {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}
+
+.auth-submit:focus-visible,
+.auth-form a:focus-visible,
+.auth-logo:focus-visible {
+    outline: 2px solid var(--highlight2);
+    outline-offset: 4px;
+}
+
+/* ===== LINK ENTRE LOGIN E CADASTRO ===== */
+
+.auth-switch {
+    text-align: center;
+    color: #62616a;
+    font-size: 0.85rem;
+
+    margin-top: 8px;
+}
+
+.auth-switch a {
+    color: var(--highlight2);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ===== TELAS MENORES ===== */
+
+@media (max-width: 850px) {
+    .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-brand {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .auth-brand__content,
+    .auth-brand__footer {
+        display: none;
+    }
+
+    .auth-panel {
+        padding: 55px 25px;
+    }
+
+    .auth-container h2 {
+        font-size: 3rem;
+    }
+}

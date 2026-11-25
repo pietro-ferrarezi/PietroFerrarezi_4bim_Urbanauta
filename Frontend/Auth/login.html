@@ -4,17 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urbanauta - Login</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/auth/auth.css">
 </head>
-<body>
-    <form id="loginForm">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email">
-        <label for="senha">Senha</label>
-        <input type="password" name="senha" id="senha">
-        <button type="submit">Entrar</button>
+<body class="auth-page">
 
-        <p>Não tem um cadastro?</p><a href="/cadastrar">Cadastrar-se</a>
-    </form>
+    <main class="auth-layout">
+
+        <aside class="auth-brand">
+            <a href="/" class="auth-logo">
+                <span>URBAN</span>AUTA.
+            </a>
+
+            <div class="auth-brand__content">
+                <span class="auth-decoration"></span>
+
+                <h1>A CIDADE NÃO MUDA SOZINHA.</h1>
+
+                <p>
+                    Conecte-se com pessoas que transformam
+                    ideias em ações. Sua cidade precisa de você.
+                </p>
+            </div>
+
+            <span class="auth-brand__footer">
+                #FAÇAPARTE
+            </span>
+        </aside>
+
+        <section class="auth-panel">
+            <div class="auth-container">
+
+                <span class="auth-eyebrow">
+                    ÁREA DO VOLUNTÁRIO / 01
+                </span>
+
+                <h2>BEM-VINDO DE VOLTA</h2>
+
+                <p class="auth-subtitle">
+                    Entre na sua conta para continuar participando.
+                </p>
+
+                <form id="loginForm" class="auth-form">
+
+                    <div class="auth-field">
+                        <label for="email">E-MAIL</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                        />
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="senha">SENHA</label>
+                        <input
+                            type="password"
+                            name="senha"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        />
+                    </div>
+
+                    <a href="/usuarios/recuperarSenha"
+                       class="auth-forgot">
+                        Esqueci minha senha
+                    </a>
+
+                    <button type="submit" class="auth-submit">
+                        ENTRAR <span aria-hidden="true">→</span>
+                    </button>
+
+                    <p class="auth-switch">
+                        Ainda não tem conta?
+                        <a href="/cadastrar">Cadastre-se</a>
+                    </p>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
 
     <script src="/auth/login.js"></script>
 </body>
