@@ -11,5 +11,11 @@ import authMiddleware  from "../Middleware/auth.js"
 router.get("/", authMiddleware, (req, res) => {
     return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "AreaVoluntario", "voluntario.html"))
 })
+router.get("/projetos", authMiddleware, (req, res) => {
+    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "AreaVoluntario", "projetos", "projetos.html"))
+})
+router.get("/projetos/:id", authMiddleware, (req, res) => {
+
+})
 
 export default router
