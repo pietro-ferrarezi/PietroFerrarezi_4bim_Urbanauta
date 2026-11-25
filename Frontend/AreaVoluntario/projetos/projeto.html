@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urbanauta - Detalhes do Projeto</title>
+    <link rel="stylesheet" href="/global/index.css" />
+    <link rel="stylesheet" href="/voluntario/projetos/detalhe/style.css" />
+    <script defer src="/global/index.js"></script>
+    <script defer src="/voluntario/projetos/detalhe/script.js"></script>
+  </head>
+  <body data-area="voluntario">
+    <header>
+      <a href="/" class="brand" aria-label="Urbanauta, página inicial"
+        ><h1 class="brandname">
+          <span class="brandname--highlight">Urban</span>auta
+        </h1></a
+      >
+      <nav class="menu" aria-label="Navegação principal"></nav>
+      <div class="user"></div>
+    </header>
+
+    <main class="detalhe">
+      <section class="detalhe__topo" aria-labelledby="projeto-titulo">
+        <div class="detalhe__topo-conteudo">
+          <a class="detalhe__voltar" href="/voluntario/projetos"
+            >← TODOS OS PROJETOS</a
+          >
+          <span class="detalhe__micro">URBANAUTA / PROJETOS / DETALHES</span>
+          <span class="detalhe__categoria" id="projeto-categoria" hidden></span>
+          <h2 id="projeto-titulo">CARREGANDO PROJETO...</h2>
+          <p id="projeto-lead">Buscando informações sobre essa iniciativa.</p>
+        </div>
+        <div class="detalhe__arte" aria-label="Imagem de capa do projeto">
+          <img id="projeto-imagem" alt="" hidden />
+          <div
+            class="detalhe__arte-placeholder"
+            id="imagem-placeholder"
+            aria-hidden="true"
+          >
+            <span>URB<span>✳</span>NAUTA</span>
+            <strong>FAÇA PARTE<br />DA MUDANÇA.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="detalhe__conteudo">
+        <div class="detalhe__sobre">
+          <span class="detalhe__indice">01 / A INICIATIVA</span>
+          <h2>SOBRE O PROJETO</h2>
+          <p id="projeto-descricao">Carregando descrição...</p>
+          <p id="projeto-estado" class="detalhe__estado" hidden></p>
+        </div>
+        <div class="detalhe__lateral" aria-hidden="true">
+          <span>IDEIAS QUE</span>
+          <strong>SAEM DO<br />PAPEL.</strong>
+          <span class="detalhe__lateral-asterisco">✳</span>
+        </div>
+      </section>
+
+      <section class="atividades" aria-labelledby="atividades-titulo">
+        <div class="atividades__cabecalho">
+          <div>
+            <span class="detalhe__indice">02 / MÃOS À OBRA</span>
+            <h2 id="atividades-titulo">ATIVIDADES DO PROJETO</h2>
+            <p>
+              Escolha uma atividade para participar e colocar a ideia em
+              prática.
+            </p>
+          </div>
+          <span class="atividades__contador" id="atividades-contador"
+            >CARREGANDO...</span
+          >
+        </div>
+        <p
+          class="atividades__aviso"
+          id="atividades-aviso"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div
+          class="atividades__grid"
+          id="atividades-lista"
+          aria-busy="true"
+        ></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__identity">
+          <a href="/" class="footer__logo"><span>Urban</span>auta.</a>
+          <h2>A cidade não muda sozinha.</h2>
+          <p>
+            Conectando pessoas, ideias e iniciativas para transformar os espaços
+            que compartilhamos.
+          </p>
+        </div>
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
+          <h3>EXPLORE</h3>
+          <a href="/">Início</a>
+          <a href="/voluntario/projetos">Projetos</a>
+          <a href="/voluntario/peticoes">Petições</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 URBANAUTA</span><span>CAMPO MOURÃO · PR</span>
+      </div>
+    </footer>
+  </body>
+</html>

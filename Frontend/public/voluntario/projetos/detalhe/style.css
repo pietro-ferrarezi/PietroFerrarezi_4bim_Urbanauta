@@ -1,0 +1,323 @@
+/* Página individual de projeto. O header e o footer vêm de /index.css. */
+.detalhe {
+  color: var(--second-black);
+}
+.detalhe__topo {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 420px;
+  background: var(--second-black);
+  color: var(--base-white);
+}
+.detalhe__topo-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 42px 6%;
+  gap: 16px;
+}
+.detalhe__voltar {
+  color: var(--highlight1);
+  text-decoration: none;
+  font:
+    400 1.2rem "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--highlight1);
+  padding-bottom: 3px;
+}
+.detalhe__voltar:hover {
+  color: var(--base-white);
+  border-color: currentColor;
+}
+.detalhe__micro,
+.detalhe__indice {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+.detalhe__micro {
+  color: #c2c0cf;
+  margin-top: 20px;
+}
+.detalhe__categoria {
+  background: var(--highlight1);
+  color: var(--second-black);
+  padding: 7px 12px;
+  font-size: 0.71rem;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.detalhe__topo h2 {
+  font:
+    400 clamp(3rem, 5vw, 6rem)/0.93 "Bebas Neue",
+    sans-serif;
+  letter-spacing: 0.5px;
+  overflow-wrap: anywhere;
+}
+.detalhe__topo-conteudo > p {
+  max-width: 600px;
+  color: #c4c2d0;
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+.detalhe__arte {
+  position: relative;
+  min-height: 340px;
+  background: var(--highlight2);
+  overflow: hidden;
+  border-left: 5px solid var(--highlight1);
+}
+.detalhe__arte > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+.detalhe__arte-placeholder {
+  position: absolute;
+  inset: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.detalhe__arte-placeholder > span {
+  font:
+    400 2rem "Bebas Neue",
+    sans-serif;
+  color: var(--base-white);
+  letter-spacing: 2px;
+}
+.detalhe__arte-placeholder > span span {
+  color: var(--highlight1);
+}
+.detalhe__arte-placeholder strong {
+  font:
+    400 clamp(3.3rem, 5vw, 6.2rem)/0.9 "Bebas Neue",
+    sans-serif;
+  color: var(--base-white);
+  position: relative;
+  z-index: 1;
+}
+.detalhe__arte-placeholder::after {
+  content: "✳";
+  position: absolute;
+  font-size: 22rem;
+  right: -40px;
+  top: 10px;
+  color: #c8ff0033;
+}
+.detalhe__conteudo {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 7%;
+  padding: 62px 6%;
+}
+.detalhe__indice {
+  color: var(--highlight2);
+}
+.detalhe__sobre h2,
+.atividades__cabecalho h2 {
+  font:
+    400 clamp(2.3rem, 3.5vw, 3.5rem)/1 "Bebas Neue",
+    sans-serif;
+  background: var(--highlight1);
+  width: fit-content;
+  margin: 11px 0 24px;
+  padding-inline: 5px;
+}
+.detalhe__sobre > p:not(.detalhe__estado) {
+  font-size: 0.97rem;
+  line-height: 1.85;
+  white-space: pre-line;
+  max-width: 740px;
+}
+.detalhe__estado {
+  display: inline-block;
+  margin-top: 24px;
+  border: 1px solid var(--second-black);
+  padding: 9px 13px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.detalhe__lateral {
+  min-height: 230px;
+  position: relative;
+  padding: 25px;
+  background: var(--highlight1);
+  border: 2px solid var(--second-black);
+  box-shadow: 6px 6px 0 var(--highlight2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detalhe__lateral > span:first-child {
+  font:
+    400 1.4rem "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+}
+.detalhe__lateral strong {
+  font:
+    400 clamp(2.5rem, 4vw, 5rem)/0.9 "Bebas Neue",
+    sans-serif;
+  position: relative;
+  z-index: 1;
+}
+.detalhe__lateral-asterisco {
+  position: absolute;
+  right: -15px;
+  bottom: -100px;
+  font-size: 16rem;
+  line-height: 1;
+  color: #304bff35;
+}
+.atividades {
+  padding: 58px 6% 85px;
+  background: #e8e5f5;
+}
+.atividades__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+}
+.atividades__cabecalho h2 {
+  margin-bottom: 12px;
+}
+.atividades__cabecalho p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5e5b6c;
+}
+.atividades__contador {
+  font:
+    400 1.5rem "Bebas Neue",
+    sans-serif;
+  white-space: nowrap;
+}
+.atividades__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+.atividade-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--base-white);
+  border: 2px solid var(--second-black);
+  box-shadow: 5px 5px 0 var(--highlight2);
+  min-width: 0;
+}
+.atividade-card__topo {
+  background: var(--highlight1);
+  padding: 10px 17px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  gap: 10px;
+}
+.atividade-card__corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 22px;
+  flex: 1;
+}
+.atividade-card h3 {
+  font:
+    400 2rem/1 "Bebas Neue",
+    sans-serif;
+  overflow-wrap: anywhere;
+}
+.atividade-card p {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  flex: 1;
+  white-space: pre-line;
+}
+.atividade-card__meta {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #4f4d59;
+  border-top: 1px solid #adaab8;
+  padding-top: 12px;
+}
+.atividade-card button {
+  cursor: pointer;
+  padding: 13px;
+  border: none;
+  border-radius: 3px;
+  background: var(--highlight1);
+  color: var(--second-black);
+  font:
+    800 0.83rem "Inter",
+    sans-serif;
+  transition: background-color 0.15s;
+}
+.atividade-card button:hover:not(:disabled) {
+  background: var(--highlight3);
+}
+.atividade-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.atividades__aviso {
+  min-height: 1.2rem;
+  margin-top: 16px;
+  font-size: 0.87rem;
+  font-weight: 600;
+}
+.atividades__mensagem {
+  grid-column: 1/-1;
+  background: var(--base-white);
+  border-left: 5px solid var(--highlight2);
+  padding: 25px;
+  line-height: 1.5;
+}
+.detalhe a:focus-visible,
+.detalhe button:focus-visible {
+  outline: 3px solid var(--highlight2);
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .detalhe__topo {
+    grid-template-columns: 1fr;
+  }
+  .detalhe__arte {
+    min-height: 250px;
+    border-left: 0;
+    border-top: 5px solid var(--highlight1);
+  }
+  .detalhe__conteudo {
+    grid-template-columns: 1fr;
+  }
+  .detalhe__lateral {
+    display: none;
+  }
+  .atividades__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  .atividades__grid {
+    grid-template-columns: 1fr;
+  }
+  .atividades__cabecalho {
+    align-items: start;
+    flex-direction: column;
+  }
+  .detalhe__topo-conteudo {
+    padding: 35px 6%;
+  }
+}

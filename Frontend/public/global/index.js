@@ -82,7 +82,6 @@
     }
 
     function atualizarHeader(usuario, area) {
-        console.log(usuario, area)
         const menu = document.querySelector(".menu");
         const user = document.querySelector(".user");
         if (!menu || !user) return;
@@ -114,7 +113,6 @@
         try {
             const resposta = await fetch("/usuarios/me", { credentials: "same-origin" });
 
-            console.log(resposta.status)
             if (resposta.status === 401) {
                 atualizarHeader(null, area);
                 return;

@@ -9,5 +9,8 @@ router.get("/", (req, res) => {
 router.get("/destaques", (req, res) => {
     projetosController.projetosEmDestaque(req, res)
 })
+router.get("/:id", (req, res) => {
+    projetosController.buscarProjeto(req, res)
+})
 
 export default router
