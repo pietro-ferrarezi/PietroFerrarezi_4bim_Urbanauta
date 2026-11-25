@@ -1,7 +1,7 @@
 import { pool } from "../database.js";
 
 const participar = async (req, res) => {
-    const userId = req.session.userId;
+    const userId = req.session.userId ?? null;
     const id = Number(req.params.id);
 
     if (!userId) {

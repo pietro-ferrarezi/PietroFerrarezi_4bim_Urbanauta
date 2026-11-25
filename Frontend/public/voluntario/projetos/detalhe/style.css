@@ -279,11 +279,10 @@
   font-weight: 600;
 }
 .atividades__mensagem {
-  grid-column: 1/-1;
-  background: var(--base-white);
-  border-left: 5px solid var(--highlight2);
-  padding: 25px;
-  line-height: 1.5;
+    grid-column: 1 / -1;
+    padding: 24px;
+    border: 1px dashed #85818e;
+    color: #504d57;
 }
 .detalhe a:focus-visible,
 .detalhe button:focus-visible {
