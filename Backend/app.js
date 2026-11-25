@@ -36,10 +36,12 @@ app.use(
 import paginasRoutes from "./routes/paginas_routes.js";
 import projetosRoutes from "./routes/projetos_routes.js";
 import usuariosRoutes from "./routes/usuarios_routes.js";
+import voluntariosRoutes from "./routes/voluntarios_routes.js";
 
 app.use("/", paginasRoutes);
 app.use("/projetos", projetosRoutes);
 app.use("/usuarios", usuariosRoutes);
+app.use("/voluntario", voluntariosRoutes);
 
 const PORT = process.env.PORT || 3030
 app.listen(PORT, async () => {

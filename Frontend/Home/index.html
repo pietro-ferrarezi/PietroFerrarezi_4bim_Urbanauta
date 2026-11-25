@@ -4,44 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Urbanauta</title>
-    <link rel="stylesheet" href="./home/style.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/global/index.css" />
+    <link rel="stylesheet" href="/home/style.css" />
+    <script defer src="/home/script.js"></script>
+    <script defer src="/global/index.js"></script>
   </head>
-  <body>
+  <body data-area="home">
     <header>
-      <a href="/" class="brand">
+      <a href="/" class="brand" aria-label="Urbanauta: página inicial">
         <h1 class="brandname">
           <span class="brandname--highlight">Urban</span>auta
         </h1>
       </a>
-      <nav class="menu">
-        <div class="menu__item">
-          <p>Iniciativas</p>
-        </div>
-        <div class="menu__item">
-          <p>Administrativo</p>
-        </div>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <!-- O JS preenche os itens conforme a sessão. -->
       </nav>
+
       <div class="user">
-        <button class="btt-login">Entrar</button>
+        <!-- Elemento seguro por padrão: visitantes veem Entrar, inclusive se o JS falhar. -->
+        <a class="btt-login" href="/login">Entrar</a>
       </div>
     </header>
+
     <main>
       <section class="welcome">
         <div class="welcome__hero">
           <div class="hero__left">
             <img
-              src="./Imagens_paginas/letreiro.png"
+              src="/Imagens_paginas/letreiro.png"
               alt="Cidades mais verdes começam com pessoas"
               style="width: 30vw; height: auto"
             />
-            <button class="primary-btt hero__btt">
-              Participe das Iniciativas -->
-            </button>
+            <a href="/login" class="primary-btt hero__btt" id="participar-link"
+              >Participe das Iniciativas --&gt;</a
+            >
           </div>
           <div class="hero__right">
             <img
-              src="./Imagens_paginas/imagem_lateral.png"
+              src="/Imagens_paginas/imagem_lateral.png"
+              alt=""
               style="width: 48vw; height: auto"
             />
           </div>
@@ -49,7 +51,7 @@
         <div class="welcome__features">
           <div class="features__item">
             <div class="f__item__imagem">
-              <img src="./Imagens_paginas/icon_plant.png" />
+              <img src="/Imagens_paginas/icon_plant.png" alt="" />
             </div>
             <div class="f__item__content">
               <p class="i__content__title">Projetos</p>
@@ -60,7 +62,7 @@
           </div>
           <div class="features__item">
             <div class="f__item__imagem">
-              <img src="./Imagens_paginas/icon_earth.png" />
+              <img src="/Imagens_paginas/icon_earth.png" alt="" />
             </div>
             <div class="f__item__content">
               <p class="i__content__title">Atividades</p>
@@ -71,7 +73,7 @@
           </div>
           <div class="features__item">
             <div class="f__item__imagem">
-              <img src="./Imagens_paginas/icon_papers.png" />
+              <img src="/Imagens_paginas/icon_papers.png" alt="" />
             </div>
             <div class="f__item__content">
               <p class="i__content__title">Petições</p>
@@ -80,7 +82,7 @@
           </div>
           <div class="features__item">
             <div class="f__item__imagem">
-              <img src="./Imagens_paginas/icon_community.png" />
+              <img src="/Imagens_paginas/icon_community.png" alt="" />
             </div>
             <div class="f__item__content">
               <p class="i__content__title">Comunidade</p>
@@ -89,13 +91,38 @@
           </div>
         </div>
       </section>
+
       <section class="projetos">
         <h2>Projetos em Destaque</h2>
-        <div class="projetos__display">
-        </div>
+        <div class="projetos__display" aria-live="polite"></div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__identity">
+          <a href="/" class="footer__logo"> <span>Urban</span>auta </a>
 
-    <script defer src="/home/script.js"></script>
+          <h2>A cidade não muda sozinha.</h2>
+
+          <p>
+            Conectando pessoas, ideias e iniciativas para transformar os espaços
+            que compartilhamos.
+          </p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
+          <h3>EXPLORE</h3>
+
+          <a href="/">Início</a>
+          <a href="/voluntario">Iniciativas</a>
+          <a href="/voluntario">Minha área</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 URBANAUTA</span>
+        <span>Pietro Diosti Ferrarezi - M32 2026</span>
+      </div>
+    </footer>
   </body>
 </html>

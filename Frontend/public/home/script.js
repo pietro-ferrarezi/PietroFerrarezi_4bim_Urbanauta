@@ -1,61 +1,58 @@
+// Apenas funcionalidades da Home. O header é montado por /js/header.js.
+
 async function buscarDestaques() {
-    try {
-        const response = await fetch("/projetos/destaques");
-
-        if (!response.status === 200) {
-            throw new Error("Erro ao carregar destaques");
-        }
-
-        const projetos = await response.json();
-
-        return projetos.projetos
-
-    } catch (err) {
-        console.error(err);
-    }
+    const resposta = await fetch("/projetos/destaques");
+    if (!resposta.ok) throw new Error("Erro ao carregar destaques");
+    const dados = await resposta.json();
+    return Array.isArray(dados.projetos) ? dados.projetos : [];
 }
 
 function carregarDestaques(destaques) {
-    for (let i = 0; i < destaques.length; i++) {
-        const destaque = destaques[i]
-        document.querySelector(".projetos__display").innerHTML += `
-        <article class="projeto-card">
-            <span class="projeto-card__tag">${destaque.categoria}</span>
+    const container = document.querySelector(".projetos__display");
+    if (!container) return;
+    container.replaceChildren();
 
-            <div class="projeto-card__conteudo">
-              <span class="projeto-card__numero">0${i+1} / PROJETO</span>
+    destaques.forEach((destaque, indice) => {
+        const card = document.createElement("article");
+        card.className = "projeto-card";
 
-              <h3>${destaque.titulo}</h3>
+        const tag = document.createElement("span");
+        tag.className = "projeto-card__tag";
+        tag.textContent = destaque.categoria || "Projeto";
 
-              <p>
-                ${destaque.lead}
-              </p>
+        const conteudo = document.createElement("div");
+        conteudo.className = "projeto-card__conteudo";
 
-              <button class="primary-btt">Conheça o projeto --></button>
-              </a>
-            </div>
-          </article>
-        `
+        const numero = document.createElement("span");
+        numero.className = "projeto-card__numero";
+        numero.textContent = `${String(indice + 1).padStart(2, "0")} / PROJETO`;
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = destaque.titulo || "Projeto";
+
+        const descricao = document.createElement("p");
+        descricao.textContent = destaque.lead || "";
+
+        const conhecer = document.createElement("a");
+        conhecer.className = "primary-btt";
+        // Ajuste o link quando a rota de detalhes estiver definida no Express.
+        conhecer.href = destaque.id != null
+            ? `/projetos/${encodeURIComponent(destaque.id)}`
+            : "/voluntario";
+        conhecer.textContent = "Conheça o projeto →";
+
+        conteudo.append(numero, titulo, descricao, conhecer);
+        card.append(tag, conteudo);
+        container.append(card);
+    });
+}
+
+async function iniciarDestaques() {
+    try {
+        carregarDestaques(await buscarDestaques());
+    } catch (erro) {
+        console.error(erro);
     }
 }
 
-async function carregarUsuario() {
-    const response = await fetch("/usuarios/me")
-
-    if(response.status === 401) {
-        document.querySelector(".btt-login").style.display = "block"
-    } else {
-        document.querySelector(".btt-login").style.display = "block"
-    }
-}
-
-document.querySelector(".btt-login").addEventListener("click", () => {
-    window.location.href = "/login"
-})
-
-window.onload = async () => {
-    const destaques = await buscarDestaques()
-    carregarDestaques(destaques)
-
-    carregarUsuario()
-}
+document.addEventListener("DOMContentLoaded", iniciarDestaques);

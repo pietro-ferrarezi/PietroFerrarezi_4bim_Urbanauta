@@ -1,179 +1,148 @@
 .welcome {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
 .welcome__hero {
-    display: flex;
-    background-color: var(--base-black);
-    justify-content: space-between;
-    height: fit-content;
+  display: flex;
+  background-color: var(--base-black);
+  justify-content: space-between;
+  height: fit-content;
 }
-
 .hero__left {
-    display: flex;
-    flex-direction: column;
-    padding-left: 4vw;
-    justify-content: space-evenly;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4vw;
+  justify-content: space-evenly;
+  flex: 1;
 }
-
 .hero__btt {
-    margin-left: 3vw;
-    transition: all 0.1s ease-out;
+  margin-left: 3vw;
+  text-decoration: none;
+  transition:
+    transform 0.1s ease-out,
+    background-color 0.1s ease-out;
 }
-
 .hero__btt:hover {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
-
 .welcome__features {
-    display: flex;
-    background-color: var(--base-black);
-    color: var(--base-white);
-    align-items: center;
-    padding-block: 4vh;
+  display: flex;
+  background-color: var(--base-black);
+  color: var(--base-white);
+  align-items: center;
+  padding-block: 4vh;
 }
 .features__item {
-    flex: 1;
-    display: flex;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 .features__item:not(:first-child) {
-    border-left: 1px solid white;
+  border-left: 1px solid white;
 }
 .f__item__imagem {
-    margin-left: 10%;
+  margin-left: 10%;
 }
 .f__item__imagem img {
-    width: 60px;
+  width: 60px;
 }
 .f__item__content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 5%;
 }
-
 .i__content__title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 .i__content__description {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
-
 .projetos {
-    background-color: var(--base-white);
-    color: var(--second-black);
-    height: 80vh;
-    padding: 3%;
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
+  background-color: var(--base-white);
+  color: var(--second-black);
+  min-height: 80vh;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .projetos h2 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2.6rem;
-    width: fit-content;
-    background-color: var(--highlight1);
-    color: var(--second-black);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.6rem;
+  width: fit-content;
+  background-color: var(--highlight1);
+  color: var(--second-black);
 }
-
-/* CONTAINER DOS PROJETOS */
-
 .projetos__display {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-    padding-inline: 3%;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  padding-inline: 3%;
+  align-items: stretch;
 }
-
-/* CARD */
-
 .projeto-card {
-    background-color: var(--base-white);
-
-    display: flex;
-    flex-direction: column;
-
-    border: 2px solid var(--second-black);
-    border-radius: 3px;
-    box-shadow: 5px 5px 0 var(--highlight2);
-
-    height: 55vh;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+  background-color: var(--base-white);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--second-black);
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 var(--highlight2);
+  min-height: 55vh;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-
 .projeto-card .primary-btt {
-    width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: auto;
 }
-
 .projeto-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 9px 9px 0 var(--highlight2);
+  transform: translate(-4px, -4px);
+  box-shadow: 9px 9px 0 var(--highlight2);
 }
-
-/* FAIXA SUPERIOR */
-
 .projeto-card__tag {
-    background-color: var(--highlight1);
-    color: var(--second-black);
-
-    padding: 10px 16px;
-
-    font-size: 0.7rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  background-color: var(--highlight1);
+  color: var(--second-black);
+  padding: 10px 16px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-
-/* CONTEÚDO */
-
 .projeto-card__conteudo {
-    padding: 22px;
-
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
 }
-
-/* NUMERAÇÃO */
-
 .projeto-card__numero {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2rem;
-
-    border-bottom: 1px solid #414148;
-    padding-bottom: 10px;
-    color: var(--second-black);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  border-bottom: 1px solid #414148;
+  padding-bottom: 10px;
+  color: var(--second-black);
 }
-
-/* TÍTULO */
-
 .projeto-card h3 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.9rem;
-    font-weight: normal;
-    line-height: 1.05;
-    letter-spacing: 0.3px;
-    background-color: var(--highlight1);
-    color: var(--second-black);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.9rem;
+  font-weight: normal;
+  line-height: 1.05;
+  letter-spacing: 0.3px;
+  background-color: var(--highlight1);
+  color: var(--second-black);
 }
-
-/* DESCRIÇÃO */
-
 .projeto-card p {
-    color: var(--second-black);
-    font-family: "Inter", sans-serif;
-    font-size: 0.85rem;
-    line-height: 1.6;
-
-    flex: 1;
+  color: var(--second-black);
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  flex: 1;
 }

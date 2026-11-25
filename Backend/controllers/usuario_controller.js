@@ -84,20 +84,51 @@ const logout = async (req, res) => {
 };
 
 const me = async (req, res) => {
+  const userID = req.session.userId
   try {
-    if (!req.session.userId) {
+    if (!userID) {
       return res.status(401).json({ message: "Usuário não logado" });
     }
+
     const result = await pool.query(
-      "SELECT ID_USUARIO, nome, email FROM Usuario WHERE ID_USUARIO = $1",
-      [req.session.userId],
+      `SELECT
+        u.ID_USUARIO AS id,
+        u.nome,
+        u.email,
+
+        EXISTS (
+            SELECT 1
+            FROM Colaborador c
+            WHERE c.ID_VOLUNTARIO = v.ID_VOLUNTARIO
+        ) AS colaborador,
+
+        EXISTS (
+            SELECT 1
+            FROM Administrador a
+            WHERE a.ID_VOLUNTARIO = v.ID_VOLUNTARIO
+        ) AS administrador
+
+      FROM Usuario u
+      INNER JOIN Voluntario v
+        ON v.ID_USUARIO = u.ID_USUARIO
+
+      WHERE u.ID_USUARIO = $1;`,
+      [userID],
     );
 
     if (result.rows.length === 0) {
       return res.status(401).json({ message: "Usuário não encontrado" });
     }
 
-    res.status(200).json({ user: result.rows[0] });
+    const usuario = result.rows[0];
+
+    return res.status(200).json({
+        id: usuario.id,
+        nome: usuario.nome,
+        email: usuario.email,
+        colaborador: usuario.colaborador,
+        administrador: usuario.administrador
+    });
   } catch (err) {
     console.log(err.message);
     res.status(500).json({ message: "Erro interno no servidor" });

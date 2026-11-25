@@ -1,0 +1,270 @@
+/* Somente a página inicial do voluntário. Header e footer vêm de /index.css. */
+.voluntario {
+  width: 100%;
+}
+.voluntario__intro {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  min-height: 350px;
+  background: var(--second-black);
+  color: var(--base-white);
+  overflow: hidden;
+}
+.voluntario__intro-conteudo {
+  padding: 54px 5vw 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.voluntario__selo,
+.vitrine__indice {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.voluntario__selo {
+  color: var(--highlight1);
+  margin-bottom: 18px;
+}
+.voluntario__intro h2 {
+  max-width: 740px;
+  font:
+    400 clamp(3.5rem, 6vw, 6.8rem)/0.9 "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+}
+.voluntario__intro h2 span {
+  color: var(--highlight1);
+}
+.voluntario__intro p {
+  max-width: 540px;
+  margin-top: 23px;
+  color: #c4c1d0;
+  line-height: 1.65;
+  font-size: 0.94rem;
+}
+.voluntario__atalhos {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.voluntario__atalho {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  padding: 13px 17px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border: 2px solid var(--highlight1);
+  border-radius: 3px;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+.voluntario__atalho--principal {
+  background: var(--highlight1);
+  color: var(--second-black);
+}
+.voluntario__atalho--secundario {
+  color: var(--highlight1);
+}
+.voluntario__atalho:hover {
+  background: var(--highlight3);
+  color: var(--second-black);
+  border-color: var(--highlight3);
+  transform: translateY(-2px);
+}
+.voluntario__intro-grafico {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  background: var(--highlight2);
+  border-left: 6px solid var(--highlight1);
+}
+.voluntario__grafico-numero {
+  font:
+    400 2.2rem "Bebas Neue",
+    sans-serif;
+  color: var(--highlight1);
+}
+.voluntario__grafico-numero span {
+  color: var(--base-white);
+}
+.voluntario__grafico-texto {
+  position: relative;
+  z-index: 1;
+  font:
+    400 clamp(3rem, 4.7vw, 6rem)/0.96 "Bebas Neue",
+    sans-serif;
+  color: white;
+}
+.voluntario__grafico-sinal {
+  position: absolute;
+  font-size: 24rem;
+  right: -35px;
+  bottom: -120px;
+  line-height: 1;
+  color: #c8ff0028;
+}
+
+.vitrine {
+  padding: 54px 5% 65px;
+  background: var(--base-white);
+  color: var(--second-black);
+}
+.vitrine--peticoes {
+  background: #e5e3ee;
+  border-top: 2px solid var(--second-black);
+}
+.vitrine__cabecalho {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 29px;
+}
+.vitrine__indice {
+  color: var(--highlight2);
+}
+.vitrine h2 {
+  width: fit-content;
+  margin-top: 7px;
+  background: var(--highlight1);
+  color: var(--second-black);
+  font:
+    400 clamp(2rem, 3vw, 3rem)/1.04 "Bebas Neue",
+    sans-serif;
+  padding-inline: 5px;
+}
+.vitrine__ver-todos {
+  font:
+    400 1.2rem "Bebas Neue",
+    sans-serif;
+  letter-spacing: 0.5px;
+  color: var(--second-black);
+  text-decoration: none;
+  border-bottom: 2px solid var(--highlight2);
+  padding-bottom: 3px;
+  white-space: nowrap;
+
+  transition: all 0.1s linear;
+}
+.vitrine__ver-todos:hover {
+  background: var(--highlight1);
+  transform: translateX(-1px) translateY(-1px);
+}
+.vitrine__grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.vitrine__mensagem {
+  color: #555461;
+  grid-column: 1 / -1;
+}
+.destaque-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--base-white);
+  border: 2px solid var(--second-black);
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 var(--highlight2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.destaque-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--highlight2);
+}
+.destaque-card__etiqueta {
+  display: block;
+  padding: 9px 15px;
+  background: var(--highlight1);
+  color: var(--second-black);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.destaque-card__conteudo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+.destaque-card__numero {
+  font:
+    400 1.8rem "Bebas Neue",
+    sans-serif;
+  border-bottom: 1px solid #777781;
+  padding-bottom: 8px;
+}
+.destaque-card h3 {
+  width: fit-content;
+  background: var(--highlight1);
+  font:
+    400 2rem/1.05 "Bebas Neue",
+    sans-serif;
+  overflow-wrap: anywhere;
+}
+.destaque-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 13px;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.destaque-card__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background: var(--highlight1);
+  color: var(--second-black);
+  padding: 13px 15px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+.destaque-card__link:hover {
+  background: var(--highlight3);
+}
+.destaque-card__link:focus-visible,
+.voluntario__atalho:focus-visible,
+.vitrine__ver-todos:focus-visible {
+  outline: 3px solid var(--highlight2);
+  outline-offset: 3px;
+}
+@media (max-width: 900px) {
+  .voluntario__intro {
+    grid-template-columns: 1fr;
+  }
+  .voluntario__intro-grafico {
+    display: none;
+  }
+  .vitrine__grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 580px) {
+  .vitrine__cabecalho {
+    align-items: start;
+    flex-direction: column;
+  }
+  .vitrine__grade {
+    grid-template-columns: 1fr;
+  }
+}

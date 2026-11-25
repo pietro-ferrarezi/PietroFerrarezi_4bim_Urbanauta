@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urbanauta - Voluntário</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/global/index.css">
+    <script defer src="/global/index.js"></script>
+    <link rel="stylesheet" href="/voluntario/voluntario.css">
+    <script defer src="/voluntario/voluntario.js"></script>
 </head>
-<body>
+<body data-area="voluntario">
     <header>
       <a href="/" class="brand">
         <h1 class="brandname">
@@ -25,8 +28,76 @@
         <button class="btt-login">Entrar</button>
       </div>
     </header>
-    <main>
+    <main class="voluntario">
+      <section class="voluntario__intro" aria-labelledby="intro-titulo">
+        <div class="voluntario__intro-conteudo">
+          <span class="voluntario__selo">URBANAUTA / SUA ÁREA</span>
+          <h2 id="intro-titulo">A CIDADE <span>NÃO MUDA</span> SOZINHA.</h2>
+          <p>Conheça iniciativas, participe de ações e apoie ideias que transformam Campo Mourão.</p>
+          <div class="voluntario__atalhos">
+            <a href="/voluntario/projetos" class="voluntario__atalho voluntario__atalho--principal">EXPLORAR PROJETOS <span aria-hidden="true">↗</span></a>
+            <a href="/voluntario/peticoes" class="voluntario__atalho voluntario__atalho--secundario">VER PETIÇÕES <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="voluntario__intro-grafico" aria-hidden="true">
+          <span class="voluntario__grafico-numero">01<span>/</span>02</span>
+          <span class="voluntario__grafico-texto">PARTICIPE.<br />TRANSFORME.<br />OCUPE.</span>
+          <span class="voluntario__grafico-sinal">✳</span>
+        </div>
+      </section>
 
+      <section class="vitrine" aria-labelledby="projetos-titulo">
+        <div class="vitrine__cabecalho">
+          <div>
+            <span class="vitrine__indice">01 / COLOQUE A MÃO NA MASSA</span>
+            <h2 id="projetos-titulo">PROJETOS EM DESTAQUE</h2>
+          </div>
+          <a href="/voluntario/projetos" class="vitrine__ver-todos">TODOS OS PROJETOS <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="vitrine__grade" id="destaques-projetos" aria-live="polite">
+          <p class="vitrine__mensagem">Carregando projetos...</p>
+        </div>
+      </section>
+
+      <section class="vitrine vitrine--peticoes" aria-labelledby="peticoes-titulo">
+        <div class="vitrine__cabecalho">
+          <div>
+            <span class="vitrine__indice">02 / FAÇA SUA VOZ SER OUVIDA</span>
+            <h2 id="peticoes-titulo">PETIÇÕES EM DESTAQUE</h2>
+          </div>
+          <a href="/voluntario/peticoes" class="vitrine__ver-todos">TODAS AS PETIÇÕES <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="vitrine__grade" id="destaques-peticoes" aria-live="polite">
+          <p class="vitrine__mensagem">Carregando petições...</p>
+        </div>
+      </section>
     </main>
+        <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__identity">
+          <a href="/" class="footer__logo"> <span>Urban</span>auta </a>
+
+          <h2>A cidade não muda sozinha.</h2>
+
+          <p>
+            Conectando pessoas, ideias e iniciativas para transformar os espaços
+            que compartilhamos.
+          </p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
+          <h3>EXPLORE</h3>
+
+          <a href="/">Início</a>
+          <a href="/voluntario">Iniciativas</a>
+          <a href="/voluntario">Minha área</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 URBANAUTA</span>
+        <span>Pietro Diosti Ferrarezi - M32 2026</span>
+      </div>
+    </footer>
 </body>
 </html>

@@ -19,8 +19,8 @@ router.get("/cadastrar", (req, res) => {
     return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "Auth", "cadastro.html"))
 })
 
-router.get("/voluntario", authMiddleware, (req, res) => {
-    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "AreaVoluntario", "voluntario.html"))
+router.get("/gerenciamento", authMiddleware, (req, res) => {
+    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "AreaColaborador", "colaborador.html"))
 })
 
 export default router
