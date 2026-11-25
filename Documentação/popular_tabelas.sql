@@ -630,41 +630,32 @@ VALUES ('2026-09-11 12:00:00', 1, 2),
 
 -- 11. PETIÇÕES (4): agora criadas por 4 colaboradores diferentes.
 
-INSERT INTO
-    public.Peticao (
-        titulo,
-        descricao,
-        meta_assinatura,
-        data_criacao,
-        ID_COLABORADOR_CRIADOR
-    )
-VALUES (
+INSERT INTO public.Peticao
+    (titulo, lead, descricao, meta_assinatura, data_criacao, ID_COLABORADOR_CRIADOR)
+VALUES
+    (
         'Mais árvores nas ruas',
+        'Sua assinatura pode ajudar a trazer mais sombra para as ruas de Campo Mourão.',
         'Quem anda a pé por Campo Mourão sente a diferença que uma rua arborizada faz. Queremos reunir assinaturas para pedir mais atenção ao plantio e ao cuidado com as árvores nos caminhos que usamos todos os dias. Se você também acha que a cidade merece mais sombra e conforto, fortaleça esse pedido com sua assinatura.',
-        4,
-        '2026-08-01 10:00:00',
-        1
+        4, '2026-08-01 10:00:00', 1
     ),
     (
         'Ciclovias conectando bairros',
+        'Vamos conquistar caminhos mais seguros para pedalar pela nossa cidade?',
         'Muita gente usa a bicicleta para estudar, trabalhar ou simplesmente circular pela cidade. Nosso pedido é por conexões cicláveis mais seguras entre os bairros de Campo Mourão, para que pedalar seja uma opção melhor para mais pessoas. Assine se você acredita que a mobilidade da cidade precisa considerar quem está sobre duas rodas.',
-        20,
-        '2026-09-05 14:00:00',
-        3
+        20, '2026-09-05 14:00:00', 3
     ),
     (
         'Lixeiras seletivas nas praças',
+        'Ajude a tornar nossas praças mais limpas e a reciclagem mais acessível.',
         'Separar o lixo é mais fácil quando a cidade oferece condições para isso. Queremos pedir lixeiras identificadas para diferentes resíduos nas praças de Campo Mourão, acompanhadas de informação clara para quem usa esses espaços. Se você também quer ver as praças mais bem cuidadas, ajude a mostrar que essa mudança importa.',
-        10,
-        '2026-09-20 09:00:00',
-        4
+        10, '2026-09-20 09:00:00', 4
     ),
     (
         'Calçadas acessíveis no centro',
+        'Ir e vir pela cidade é um direito de todos. Assine por caminhos sem barreiras.',
         'Circular pelo centro deveria ser tranquilo para todo mundo, inclusive pessoas com deficiência, idosos e quem empurra carrinho de bebê. Esta petição pede atenção às rampas, desníveis e obstáculos das calçadas de Campo Mourão. Sua assinatura ajuda a dar visibilidade a um problema que merece ser levado a sério.',
-        12,
-        '2026-10-28 16:00:00',
-        7
+        12, '2026-10-28 16:00:00', 7
     );
 
 -- 12. ASSINATURAS (26): todos os 20 voluntários assinam ao menos uma.

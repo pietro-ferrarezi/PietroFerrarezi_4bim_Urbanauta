@@ -108,11 +108,13 @@ CREATE TABLE public.Participacao (
 CREATE TABLE public.Peticao (
     ID_PETICAO SERIAL PRIMARY KEY,
     titulo VARCHAR(100) NOT NULL,
+    lead VARCHAR(150),
     descricao VARCHAR(500),
     meta_assinatura INT NOT NULL CHECK (meta_assinatura > 0),
     data_criacao TIMESTAMP NOT NULL,
     ID_COLABORADOR_CRIADOR INT NOT NULL,
-    FOREIGN KEY (ID_COLABORADOR_CRIADOR) REFERENCES public.Colaborador(ID_COLABORADOR)
+    FOREIGN KEY (ID_COLABORADOR_CRIADOR)
+        REFERENCES public.Colaborador(ID_COLABORADOR)
 );
 
 CREATE TABLE public.Assinatura (
