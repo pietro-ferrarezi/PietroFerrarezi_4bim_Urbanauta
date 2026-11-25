@@ -38,12 +38,14 @@ import projetosRoutes from "./routes/projetos_routes.js";
 import peticoesRoutes from "./routes/peticoes_routes.js";
 import usuariosRoutes from "./routes/usuarios_routes.js";
 import voluntariosRoutes from "./routes/voluntarios_routes.js";
+import iniciativasRoutes from "./routes/iniciativas_routes.js";
 
 app.use("/", paginasRoutes);
 app.use("/projetos", projetosRoutes);
 app.use("/peticoes", peticoesRoutes)
 app.use("/usuarios", usuariosRoutes);
 app.use("/voluntario", voluntariosRoutes);
+app.use("/iniciativas", iniciativasRoutes);
 
 const PORT = process.env.PORT || 3030
 app.listen(PORT, async () => {

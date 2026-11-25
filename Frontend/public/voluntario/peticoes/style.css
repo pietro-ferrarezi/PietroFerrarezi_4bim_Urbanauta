@@ -1,0 +1,245 @@
+.peticoes-catalogo {
+  color: var(--second-black);
+}
+.peticoes-hero {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background: var(--second-black);
+  color: var(--base-white);
+  min-height: 320px;
+}
+.peticoes-hero__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 55px 6%;
+}
+.peticoes-hero__sobretitulo,
+.peticoes-hero__voltar {
+  color: var(--highlight1);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.peticoes-hero h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
+  line-height: 0.95;
+  max-width: 700px;
+}
+.peticoes-hero h2 span {
+  color: var(--highlight1);
+}
+.peticoes-hero__texto p {
+  color: #c7c5d1;
+  max-width: 530px;
+  line-height: 1.65;
+}
+.peticoes-hero__voltar:hover {
+  text-decoration: underline;
+}
+.peticoes-hero__arte {
+  position: relative;
+  overflow: hidden;
+  background: var(--highlight2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 34px;
+  color: var(--base-white);
+}
+.peticoes-hero__indice {
+  font:
+    400 3rem "Bebas Neue",
+    sans-serif;
+  color: var(--highlight1);
+}
+.peticoes-hero__indice span {
+  color: var(--base-white);
+}
+.peticoes-hero__arte strong {
+  font:
+    400 clamp(3rem, 5vw, 6rem)/0.9 "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+}
+.peticoes-hero__arte small {
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--highlight1);
+}
+.peticoes-lista {
+  padding: 55px 5% 85px;
+}
+.peticoes-lista__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+.peticoes-lista__marcador {
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  color: var(--highlight2);
+  font-weight: 800;
+}
+.peticoes-lista h2 {
+  font:
+    400 2.8rem/1 "Bebas Neue",
+    sans-serif;
+  margin-top: 10px;
+}
+.peticoes-lista__busca {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 320px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.peticoes-lista__busca input {
+  box-sizing: border-box;
+  width: 100%;
+  font:
+    400 0.9rem "Inter",
+    sans-serif;
+  padding: 13px;
+  background: white;
+  border: 1px solid var(--second-black);
+  border-radius: 3px;
+  outline: none;
+}
+.peticoes-lista__busca input:focus {
+  border-color: var(--highlight2);
+  box-shadow: 3px 3px 0 var(--highlight2);
+}
+.peticoes-lista__contador {
+  color: #585562;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+.peticoes-lista__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.peticao-card {
+  background: var(--base-white);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--second-black);
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 var(--highlight2);
+  min-height: 330px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.peticao-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--highlight2);
+}
+.peticao-card__etiqueta {
+  background: var(--highlight1);
+  padding: 10px 16px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.peticao-card__corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px;
+  flex: 1;
+  min-width: 0;
+}
+.peticao-card__numero {
+  font:
+    400 2rem "Bebas Neue",
+    sans-serif;
+  border-bottom: 1px solid #55545e;
+  padding-bottom: 8px;
+}
+.peticao-card h3 {
+  font:
+    400 1.9rem/1.05 "Bebas Neue",
+    sans-serif;
+  background: var(--highlight1);
+  width: fit-content;
+}
+.peticao-card__descricao {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.peticao-card__meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.peticao-card__progresso {
+  height: 5px;
+  background: #d5d2dd;
+  overflow: hidden;
+}
+.peticao-card__progresso div {
+  height: 100%;
+  background: var(--highlight2);
+}
+.peticao-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--highlight1);
+  color: var(--second-black);
+  text-decoration: none;
+  padding: 12px 15px;
+  font-weight: 800;
+  font-size: 0.82rem;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.peticao-card__link:hover {
+  background: var(--highlight3);
+}
+.peticoes-lista__mensagem {
+  grid-column: 1/-1;
+  padding: 24px;
+  border: 1px dashed #85818e;
+  color: #504d57;
+}
+@media (max-width: 1000px) {
+  .peticoes-lista__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 680px) {
+  .peticoes-hero {
+    grid-template-columns: 1fr;
+  }
+  .peticoes-hero__arte {
+    min-height: 180px;
+  }
+  .peticoes-lista__cabecalho {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .peticoes-lista__busca {
+    min-width: 0;
+  }
+  .peticoes-lista__grid {
+    grid-template-columns: 1fr;
+  }
+}

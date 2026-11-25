@@ -47,4 +47,31 @@ router.get("/projetos/:id", authMiddleware, (req, res) => {
   );
 });
 
+router.get("/peticoes", authMiddleware, (req, res) => {
+  return res.sendFile(
+    path.join(
+      __dirname,
+      "..",
+      "..",
+      "Frontend",
+      "AreaVoluntario",
+      "peticoes",
+      "peticoes_cat.html",
+    ),
+  );
+});
+router.get("/peticoes/:id", authMiddleware, (req, res) => {
+  return res.sendFile(
+    path.join(
+      __dirname,
+      "..",
+      "..",
+      "Frontend",
+      "AreaVoluntario",
+      "peticoes",
+      "peticao.html",
+    ),
+  );
+});
+
 export default router;

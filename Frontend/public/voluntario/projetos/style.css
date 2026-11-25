@@ -228,11 +228,10 @@
   outline-offset: 4px;
 }
 .catalogo__mensagem {
-  grid-column: 1 / -1;
-  padding: 30px;
-  background: #e4e1ee;
-  border-left: 4px solid var(--highlight2);
-  color: var(--second-black);
+    grid-column: 1 / -1;
+    padding: 24px;
+    border: 1px dashed #85818e;
+    color: #504d57;
 }
 @media (max-width: 900px) {
   .catalogo__intro {

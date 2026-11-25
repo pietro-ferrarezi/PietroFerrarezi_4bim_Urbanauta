@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urbanauta - Petições</title>
+  <link rel="stylesheet" href="/global/index.css" />
+  <link rel="stylesheet" href="/voluntario/peticoes/style.css" />
+  <script defer src="/global/index.js"></script>
+  <script defer src="/voluntario/peticoes/script.js"></script>
+</head>
+<body data-area="voluntario">
+  <header>
+    <a href="/" class="brand" aria-label="Urbanauta, página inicial"><h1 class="brandname"><span class="brandname--highlight">Urban</span>auta</h1></a>
+    <nav class="menu" aria-label="Navegação principal"></nav>
+    <div class="user"></div>
+  </header>
+
+  <main class="peticoes-catalogo">
+    <section class="peticoes-hero" aria-labelledby="titulo-pagina">
+      <div class="peticoes-hero__texto">
+        <span class="peticoes-hero__sobretitulo">URBANAUTA / VOLUNTÁRIO / 02</span>
+        <h2 id="titulo-pagina">SUA VOZ <span>MOVE</span> A CIDADE.</h2>
+        <p>Assine propostas da comunidade e ajude a dar força às mudanças que queremos ver.</p>
+        <a href="/voluntario" class="peticoes-hero__voltar">← VOLTAR PARA MINHA ÁREA</a>
+      </div>
+      <div class="peticoes-hero__arte" aria-hidden="true">
+        <span class="peticoes-hero__indice">02<span>/</span>02</span>
+        <strong>LEVANTE<br />SUA VOZ<span>✳</span></strong>
+        <small>FAÇA PARTE DA MUDANÇA</small>
+      </div>
+    </section>
+
+    <section class="peticoes-lista" aria-labelledby="peticoes-lista-titulo">
+      <div class="peticoes-lista__cabecalho">
+        <div>
+          <span class="peticoes-lista__marcador">PETIÇÕES / CATÁLOGO</span>
+          <h2 id="peticoes-lista-titulo">CAUSE IMPACTO COM SUA ASSINATURA.</h2>
+        </div>
+        <label class="peticoes-lista__busca">
+          <span>BUSCAR PETIÇÃO</span>
+          <input type="search" id="busca-peticoes" placeholder="Pesquise pelo título ou descrição..." autocomplete="off" />
+        </label>
+      </div>
+      <p id="contador-peticoes" class="peticoes-lista__contador" aria-live="polite">Carregando petições...</p>
+      <div class="peticoes-lista__grid" id="lista-peticoes" aria-live="polite" aria-busy="true"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__identity">
+        <a href="/" class="footer__logo"><span>Urban</span>auta.</a>
+        <h2>A cidade não muda sozinha.</h2>
+        <p>Conectando pessoas, ideias e iniciativas para transformar os espaços que compartilhamos.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <h3>EXPLORE</h3>
+        <a href="/">Início</a>
+        <a href="/voluntario/projetos">Projetos</a>
+        <a href="/voluntario/peticoes">Petições</a>
+      </nav>
+    </div>
+    <div class="footer__bottom"><span>© 2026 URBANAUTA</span><span>CAMPO MOURÃO · PR</span></div>
+  </footer>
+</body>
+</html>

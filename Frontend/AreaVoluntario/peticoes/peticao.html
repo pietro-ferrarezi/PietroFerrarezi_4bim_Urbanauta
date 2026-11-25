@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urbanauta - Detalhes da Petição</title>
+  <link rel="stylesheet" href="/global/index.css" />
+  <link rel="stylesheet" href="/voluntario/peticoes/detalhe/style.css" />
+  <script defer src="/global/index.js"></script>
+  <script defer src="/voluntario/peticoes/detalhe/script.js"></script>
+</head>
+<body data-area="voluntario">
+  <header>
+    <a href="/" class="brand" aria-label="Urbanauta, página inicial"><h1 class="brandname"><span class="brandname--highlight">Urban</span>auta</h1></a>
+    <nav class="menu" aria-label="Navegação principal"></nav>
+    <div class="user"></div>
+  </header>
+
+  <main class="peticao-detalhe">
+    <section class="peticao-topo" aria-labelledby="peticao-titulo">
+      <div class="peticao-topo__conteudo">
+        <a class="peticao-topo__voltar" href="/voluntario/peticoes">← TODAS AS PETIÇÕES</a>
+        <span class="peticao-topo__marcador">URBANAUTA / PETIÇÕES / DETALHES</span>
+        <span class="peticao-topo__etiqueta">MOBILIZAÇÃO COMUNITÁRIA</span>
+        <h2 id="peticao-titulo">CARREGANDO PETIÇÃO...</h2>
+        <p id="peticao-lead">Buscando informações da petição.</p>
+      </div>
+      <div class="peticao-topo__grafico" aria-hidden="true">
+        <span>ASSINE<span>✳</span></span>
+        <strong>SUA VOZ<br />TEM FORÇA.</strong>
+        <span class="peticao-topo__selo">URBANAUTA / 2026</span>
+      </div>
+    </section>
+
+    <section class="peticao-conteudo">
+      <article class="peticao-conteudo__texto">
+        <span class="peticao-detalhe__indice">01 / A CAUSA</span>
+        <h2>POR QUE ESSA PETIÇÃO IMPORTA?</h2>
+        <p id="peticao-descricao">Carregando descrição...</p>
+        <div class="peticao-conteudo__autoria">
+          <span>PROPOSTA POR</span>
+          <strong id="peticao-criador">CARREGANDO...</strong>
+          <span id="peticao-data"></span>
+        </div>
+      </article>
+
+      <aside class="peticao-assinaturas" aria-labelledby="assinaturas-titulo">
+        <span class="peticao-detalhe__indice">02 / FAÇA SUA PARTE</span>
+        <h2 id="assinaturas-titulo">CADA ASSINATURA CONTA.</h2>
+        <div class="peticao-assinaturas__numeros">
+          <strong id="assinaturas-atuais">0</strong>
+          <span>de <b id="assinaturas-meta">0</b> assinaturas</span>
+        </div>
+        <div class="peticao-assinaturas__barra" role="progressbar" aria-label="Progresso das assinaturas" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="assinaturas-progresso">
+          <div id="assinaturas-preenchimento"></div>
+        </div>
+        <p class="peticao-assinaturas__porcentagem" id="assinaturas-porcentagem">0% da meta alcançada</p>
+        <button type="button" id="assinar-peticao" class="peticao-assinaturas__botao" disabled>CARREGANDO...</button>
+        <p class="peticao-assinaturas__aviso" id="assinaturas-aviso" role="status" aria-live="polite"></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__identity">
+        <a href="/" class="footer__logo"><span>Urban</span>auta.</a>
+        <h2>A cidade não muda sozinha.</h2>
+        <p>Conectando pessoas, ideias e iniciativas para transformar os espaços que compartilhamos.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <h3>EXPLORE</h3>
+        <a href="/">Início</a>
+        <a href="/voluntario/projetos">Projetos</a>
+        <a href="/voluntario/peticoes">Petições</a>
+      </nav>
+    </div>
+    <div class="footer__bottom"><span>© 2026 URBANAUTA</span><span>CAMPO MOURÃO · PR</span></div>
+  </footer>
+</body>
+</html>

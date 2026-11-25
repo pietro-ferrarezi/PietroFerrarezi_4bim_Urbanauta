@@ -1,0 +1,208 @@
+.peticao-detalhe {
+  color: var(--second-black);
+}
+.peticao-topo {
+  background: var(--second-black);
+  color: var(--base-white);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  min-height: 350px;
+}
+.peticao-topo__conteudo {
+  padding: 55px 6%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+}
+.peticao-topo__voltar,
+.peticao-topo__marcador {
+  color: var(--highlight1);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.peticao-topo__voltar:hover {
+  text-decoration: underline;
+}
+.peticao-topo__etiqueta {
+  background: var(--highlight1);
+  color: var(--second-black);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 9px 12px;
+}
+.peticao-topo h2 {
+  font:
+    400 clamp(3.5rem, 5.6vw, 6.5rem)/0.95 "Bebas Neue",
+    sans-serif;
+  overflow-wrap: anywhere;
+}
+.peticao-topo__conteudo p {
+  color: #c7c5d1;
+  line-height: 1.7;
+  max-width: 650px;
+}
+.peticao-topo__grafico {
+  background: var(--highlight2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 36px;
+  overflow: hidden;
+}
+.peticao-topo__grafico > span:first-child {
+  font:
+    400 2.6rem "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+}
+.peticao-topo__grafico > span:first-child span {
+  color: var(--highlight1);
+}
+.peticao-topo__grafico strong {
+  font:
+    400 clamp(3.8rem, 6vw, 7rem)/0.85 "Bebas Neue",
+    sans-serif;
+}
+.peticao-topo__selo {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: var(--highlight1);
+}
+.peticao-conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 6%;
+  padding: 70px 6% 100px;
+  align-items: start;
+}
+.peticao-detalhe__indice {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  color: var(--highlight2);
+  margin-bottom: 14px;
+}
+.peticao-conteudo h2 {
+  font:
+    400 2.9rem/1 "Bebas Neue",
+    sans-serif;
+  margin-bottom: 20px;
+}
+.peticao-conteudo__texto > p {
+  font-size: 1rem;
+  line-height: 1.9;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.peticao-conteudo__autoria {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid #aaa7b3;
+}
+.peticao-conteudo__autoria span {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #55535f;
+}
+.peticao-conteudo__autoria strong {
+  font-size: 0.95rem;
+}
+.peticao-assinaturas {
+  border: 2px solid var(--second-black);
+  box-shadow: 6px 6px 0 var(--highlight2);
+  padding: 25px;
+  background: var(--base-white);
+}
+.peticao-assinaturas h2 {
+  font-size: 2.4rem;
+}
+.peticao-assinaturas__numeros {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 0 16px;
+  gap: 3px;
+}
+.peticao-assinaturas__numeros > strong {
+  font:
+    400 5rem/1 "Bebas Neue",
+    sans-serif;
+}
+.peticao-assinaturas__numeros span {
+  font-size: 0.85rem;
+}
+.peticao-assinaturas__barra {
+  height: 12px;
+  background: #d7d4df;
+  border: 1px solid var(--second-black);
+  overflow: hidden;
+}
+.peticao-assinaturas__barra div {
+  width: 0;
+  height: 100%;
+  background: var(--highlight2);
+  transition: width 0.3s ease;
+}
+.peticao-assinaturas__porcentagem {
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin: 9px 0 25px;
+}
+.peticao-assinaturas__botao {
+  width: 100%;
+  padding: 15px 10px;
+  background: var(--highlight1);
+  color: var(--second-black);
+  border: 1px solid var(--second-black);
+  border-radius: 3px;
+  cursor: pointer;
+  font:
+    400 1.45rem "Bebas Neue",
+    sans-serif;
+  letter-spacing: 0.8px;
+  transition: background 0.15s;
+}
+.peticao-assinaturas__botao:hover:not(:disabled) {
+  background: var(--highlight3);
+}
+.peticao-assinaturas__botao:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+.peticao-assinaturas__botao:focus-visible {
+  outline: 2px solid var(--highlight2);
+  outline-offset: 3px;
+}
+.peticao-assinaturas__aviso {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-top: 12px;
+  min-height: 1em;
+}
+@media (max-width: 900px) {
+  .peticao-conteudo {
+    grid-template-columns: 1fr;
+  }
+  .peticao-assinaturas {
+    max-width: 460px;
+  }
+}
+@media (max-width: 680px) {
+  .peticao-topo {
+    grid-template-columns: 1fr;
+  }
+  .peticao-topo__grafico {
+    min-height: 190px;
+  }
+}
