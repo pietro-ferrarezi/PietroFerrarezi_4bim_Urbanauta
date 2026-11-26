@@ -1,0 +1,46 @@
+/* Componente compartilhado: paginação dos catálogos */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 38px;
+}
+.paginacao[hidden] {
+  display: none;
+}
+.paginacao__botao {
+  min-width: 43px;
+  height: 43px;
+  padding: 0 12px;
+  background: var(--base-white);
+  color: var(--second-black);
+  border: 2px solid var(--second-black);
+  border-radius: 3px;
+  font:
+    700 0.9rem "Inter",
+    sans-serif;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.paginacao__botao:hover:not(:disabled) {
+  background: var(--highlight1);
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--highlight2);
+}
+.paginacao__botao--atual {
+  background: var(--highlight1);
+  box-shadow: 3px 3px 0 var(--highlight2);
+}
+.paginacao__botao:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.paginacao__botao:focus-visible {
+  outline: 3px solid var(--highlight2);
+  outline-offset: 3px;
+}

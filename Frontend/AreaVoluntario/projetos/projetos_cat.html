@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="/global/index.css" />
     <link rel="stylesheet" href="/voluntario/projetos/style.css" />
     <script defer src="/global/index.js"></script>
+    <script defer src="/global/paginacao.js"></script>
     <script defer src="/voluntario/projetos/script.js"></script>
   </head>
   <body data-area="voluntario">
     <header>
       <a href="/" class="brand" aria-label="Urbanauta, página inicial">
-        <h1 class="brandname"><span class="brandname--highlight">Urban</span>auta</h1>
+        <h1 class="brandname">
+          <span class="brandname--highlight">Urban</span>auta
+        </h1>
       </a>
       <nav class="menu" aria-label="Navegação principal"></nav>
       <div class="user"></div>
@@ -23,8 +26,13 @@
         <div class="catalogo__intro-texto">
           <span class="catalogo__rotulo">URBANAUTA / VOLUNTÁRIO / 01</span>
           <h2 id="titulo-pagina">PROJETOS <span>QUE MOVEM</span> A CIDADE.</h2>
-          <p>Ideias que saem do papel e ocupam os espaços da nossa cidade. Encontre uma iniciativa que combine com você.</p>
-          <a href="/voluntario" class="catalogo__voltar">← VOLTAR PARA MINHA ÁREA</a>
+          <p>
+            Ideias que saem do papel e ocupam os espaços da nossa cidade.
+            Encontre uma iniciativa que combine com você.
+          </p>
+          <a href="/voluntario" class="catalogo__voltar"
+            >← VOLTAR PARA MINHA ÁREA</a
+          >
         </div>
         <div class="catalogo__sinal" aria-hidden="true">
           <span>01<span class="catalogo__separador">/</span>02</span>
@@ -41,11 +49,29 @@
           </div>
           <label class="catalogo__busca">
             <span>BUSCAR PROJETO</span>
-            <input type="search" id="busca-projetos" placeholder="Nome ou categoria..." autocomplete="off" />
+            <input
+              type="search"
+              id="busca-projetos"
+              placeholder="Nome ou categoria..."
+              autocomplete="off"
+            />
           </label>
         </div>
-        <p class="catalogo__contador" id="contador-projetos" aria-live="polite">Carregando projetos...</p>
-        <div class="catalogo__grid" id="lista-projetos" aria-live="polite" aria-busy="true"></div>
+        <p class="catalogo__contador" id="contador-projetos" aria-live="polite">
+          Carregando projetos...
+        </p>
+        <div
+          class="catalogo__grid"
+          id="lista-projetos"
+          aria-live="polite"
+          aria-busy="true"
+        ></div>
+        <nav
+          id="paginacao-projetos"
+          class="paginacao"
+          aria-label="Páginas de projetos"
+          hidden
+        ></nav>
       </section>
     </main>
 
@@ -54,7 +80,10 @@
         <div class="footer__identity">
           <a href="/" class="footer__logo"><span>Urban</span>auta.</a>
           <h2>A cidade não muda sozinha.</h2>
-          <p>Conectando pessoas, ideias e iniciativas para transformar os espaços que compartilhamos.</p>
+          <p>
+            Conectando pessoas, ideias e iniciativas para transformar os espaços
+            que compartilhamos.
+          </p>
         </div>
         <nav class="footer__nav" aria-label="Navegação do rodapé">
           <h3>EXPLORE</h3>
@@ -63,7 +92,9 @@
           <a href="/voluntario/peticoes">Petições</a>
         </nav>
       </div>
-      <div class="footer__bottom"><span>© 2026 URBANAUTA</span><span>CAMPO MOURÃO · PR</span></div>
+      <div class="footer__bottom">
+        <span>© 2026 URBANAUTA</span><span>CAMPO MOURÃO · PR</span>
+      </div>
     </footer>
   </body>
 </html>

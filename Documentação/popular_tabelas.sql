@@ -1,4 +1,3 @@
--- SQLBook: Code
 BEGIN;
 
 TRUNCATE TABLE public.Usuario,
@@ -305,6 +304,54 @@ VALUES (
         4,
         1,
         6
+    ),
+    (
+        'Rios da Nossa Cidade',
+        'Conhecer nossos rios também é uma forma de cuidar deles.',
+        'O Rio do Campo, o Rio Km 119 e o Rio Mourão fazem parte da paisagem e da história da cidade. Queremos conhecer melhor esses cursos de água, observar como a ocupação urbana afeta suas margens e reunir ideias para protegê-los. A proposta é aproximar a comunidade dos rios, sem precisar entrar na água ou em áreas de risco.',
+        1,
+        2,
+        2
+    ),
+    (
+        'Ônibus para Todos',
+        'Quem depende do ônibus merece esperar com conforto e segurança.',
+        'Esperar o ônibus debaixo de sol ou chuva não deveria fazer parte da rotina. Queremos ouvir quem utiliza o transporte coletivo em Campo Mourão, identificar pontos que precisam de melhorias e reunir sugestões para tornar os deslocamentos mais confortáveis.',
+        3,
+        2,
+        3
+    ),
+    (
+        'Conserta e Compartilha',
+        'Antes de jogar fora, que tal tentar consertar?',
+        'Uma mochila rasgada, um brinquedo quebrado ou uma cadeira bamba nem sempre precisam virar lixo. Queremos reunir pessoas dispostas a compartilhar ferramentas e conhecimentos para prolongar a vida dos objetos. Quem sabe consertar pode ensinar, e quem não sabe pode aprender.',
+        4,
+        2,
+        4
+    ),
+    (
+        'Memórias de Campo Mourão',
+        'Toda rua guarda histórias que merecem ser lembradas.',
+        'Queremos descobrir a cidade pelas histórias de quem vive nela. A ideia é reunir fotografias, relatos de moradores e lembranças dos bairros, promovendo encontros em espaços públicos. Pode participar quem gosta de fotografia, história ou simplesmente de ouvir uma boa conversa.',
+        2,
+        2,
+        7
+    ),
+    (
+        'Bairros Preparados para a Chuva',
+        'Pequenas observações podem ajudar a prevenir grandes transtornos.',
+        'Quando chove forte, problemas de drenagem podem complicar a rotina dos bairros. Queremos reunir moradores para identificar locais que acumulam água, registrar situações de risco e encaminhar essas informações aos órgãos responsáveis. Não vamos mexer em bueiros nem entrar em áreas alagadas.',
+        1,
+        2,
+        6
+    ),
+    (
+        'Natureza de Perto',
+        'Descubra a vida que existe nos parques da nossa cidade.',
+        'Áreas verdes como o Parque do Lago e o Parque das Torres ajudam a preservar a diversidade de plantas, aves e pequenos animais em Campo Mourão. Queremos organizar encontros para observar essa natureza, aprender a reconhecer espécies e incentivar o cuidado com os parques. Não é preciso ter equipamentos especiais: curiosidade já é um ótimo começo.',
+        1,
+        1,
+        5
     );
 
 -- 7. INICIATIVAS (8): textos e datas mantidos do script original.
@@ -401,6 +448,126 @@ VALUES (
         '2026-12-05 11:30:00',
         12,
         7,
+        1
+    ),
+    (
+        'Caminhada de observação do Rio Km 119',
+        'Vamos conversar sobre a relação entre o rio e os bairros próximos, observar a paisagem a partir de locais públicos e registrar nossas percepções. Traga água, calçado confortável e curiosidade.',
+        'Grande Lar Paraná, Campo Mourão - PR',
+        '2026-12-06 08:00:00',
+        '2026-12-06 10:30:00',
+        15,
+        11,
+        1
+    ),
+    (
+        'Mapa coletivo dos rios mourãoenses',
+        'Com mapas e fotografias, vamos identificar os cursos de água que atravessam o município e conversar sobre como eles se relacionam com a cidade. A ideia é produzir um mapa simples que ajude outras pessoas a conhecer nossos rios.',
+        'Praça São José, Campo Mourão - PR',
+        '2026-12-19 09:00:00',
+        '2026-12-19 11:30:00',
+        12,
+        11,
+        1
+    ),
+    (
+        'Escuta nos pontos de ônibus da Vila Teixeira',
+        'Vamos conversar com passageiros sobre os horários, a proteção contra chuva e sol e as condições de espera. Queremos reunir opiniões de quem utiliza o transporte coletivo de verdade, sem atrapalhar o embarque.',
+        'Rua das Andorinhas, Vila Teixeira, Campo Mourão - PR',
+        '2026-12-03 16:30:00',
+        '2026-12-03 18:00:00',
+        8,
+        12,
+        1
+    ),
+    (
+        'Levantamento de abrigos no Lar Paraná',
+        'Em pequenos grupos, vamos observar os pontos de ônibus do bairro e registrar quais oferecem bancos, cobertura e acesso adequado. As informações serão organizadas para encaminhar sugestões de melhoria.',
+        'Praça Alvorada, Lar Paraná, Campo Mourão - PR',
+        '2026-12-13 08:30:00',
+        '2026-12-13 11:00:00',
+        12,
+        12,
+        1
+    ),
+    (
+        'Oficina de pequenos consertos',
+        'Traga aquela roupa com um rasgo ou a mochila que precisa de um ajuste. Vamos compartilhar técnicas simples de costura e pequenos reparos para evitar que objetos ainda úteis acabem no lixo.',
+        'Praça Getúlio Vargas, Campo Mourão - PR',
+        '2026-12-12 14:00:00',
+        '2026-12-12 17:00:00',
+        16,
+        13,
+        1
+    ),
+    (
+        'Troca de livros e objetos usados',
+        'Tem livros que já leu ou objetos em bom estado que não usa mais? Vamos organizar uma troca entre participantes para que essas coisas encontrem novos donos. Não precisa comprar nada para participar.',
+        'Praça São José, Campo Mourão - PR',
+        '2027-01-16 09:00:00',
+        '2027-01-16 12:00:00',
+        25,
+        13,
+        1
+    ),
+    (
+        'Passeio fotográfico pelo centro',
+        'Vamos caminhar pelo centro fotografando detalhes das construções e dos espaços públicos que costumam passar despercebidos. Depois, compartilharemos os registros e as histórias que cada imagem despertou.',
+        'Estação da Luz, Campo Mourão - PR',
+        '2026-12-05 08:30:00',
+        '2026-12-05 11:00:00',
+        18,
+        14,
+        1
+    ),
+    (
+        'Roda de memórias do Lar Paraná',
+        'A ideia é ouvir moradores sobre como o bairro mudou ao longo do tempo. Quem tiver fotografias antigas pode trazer cópias, mas também vale chegar apenas para contar ou escutar histórias.',
+        'Praça Alvorada, Lar Paraná, Campo Mourão - PR',
+        '2026-12-20 15:00:00',
+        '2026-12-20 17:00:00',
+        20,
+        14,
+        1
+    ),
+    (
+        'Mapeamento de pontos de alagamento',
+        'Vamos reunir relatos e identificar pontos que merecem atenção nos dias de chuva. O levantamento será feito em tempo seco, pelas calçadas, sem abrir bueiros ou acessar áreas perigosas.',
+        'Rua da Província, Jardim Veneza, Campo Mourão - PR',
+        '2026-12-06 09:00:00',
+        '2026-12-06 11:00:00',
+        10,
+        15,
+        1
+    ),
+    (
+        'Mutirão de registro da drenagem urbana',
+        'Durante a semana, vamos reunir fotografias e relatos sobre bueiros obstruídos e acúmulo de água, sempre a partir de locais seguros. No final, organizaremos o material para encaminhamento à prefeitura.',
+        'Avenida Presidente John Kennedy, Campo Mourão - PR',
+        '2026-11-23 08:00:00',
+        '2026-11-29 17:00:00',
+        12,
+        15,
+        2
+    ),
+    (
+        'Observação de aves no Parque do Lago',
+        'Vamos caminhar com calma pelas áreas abertas à visitação e prestar atenção nas aves que encontramos pelo caminho. Quem tiver binóculos pode levar, mas não é obrigatório. A ideia é observar sem alimentar ou incomodar os animais.',
+        'Parque Joaquim Teodoro de Oliveira, Campo Mourão - PR',
+        '2027-01-10 07:30:00',
+        '2027-01-10 10:00:00',
+        15,
+        16,
+        1
+    ),
+    (
+        'Tarde de brincadeiras na Praça Japão',
+        'Vamos levar jogos de tabuleiro, cordas e outras brincadeiras para ocupar a praça de um jeito divertido. Queremos incentivar o encontro entre vizinhos e descobrir novas formas de aproveitar esse espaço.',
+        'Praça Japão, Jardim Tropical I, Campo Mourão - PR',
+        '2026-12-13 15:00:00',
+        '2026-12-13 18:00:00',
+        24,
+        2,
         1
     );
 
@@ -630,32 +797,94 @@ VALUES ('2026-09-11 12:00:00', 1, 2),
 
 -- 11. PETIÇÕES (4): agora criadas por 4 colaboradores diferentes.
 
-INSERT INTO public.Peticao
-    (titulo, lead, descricao, meta_assinatura, data_criacao, ID_COLABORADOR_CRIADOR)
-VALUES
-    (
+INSERT INTO
+    public.Peticao (
+        titulo,
+        lead,
+        descricao,
+        meta_assinatura,
+        data_criacao,
+        ID_COLABORADOR_CRIADOR
+    )
+VALUES (
         'Mais árvores nas ruas',
         'Sua assinatura pode ajudar a trazer mais sombra para as ruas de Campo Mourão.',
         'Quem anda a pé por Campo Mourão sente a diferença que uma rua arborizada faz. Queremos reunir assinaturas para pedir mais atenção ao plantio e ao cuidado com as árvores nos caminhos que usamos todos os dias. Se você também acha que a cidade merece mais sombra e conforto, fortaleça esse pedido com sua assinatura.',
-        4, '2026-08-01 10:00:00', 1
+        4,
+        '2026-08-01 10:00:00',
+        1
     ),
     (
         'Ciclovias conectando bairros',
         'Vamos conquistar caminhos mais seguros para pedalar pela nossa cidade?',
         'Muita gente usa a bicicleta para estudar, trabalhar ou simplesmente circular pela cidade. Nosso pedido é por conexões cicláveis mais seguras entre os bairros de Campo Mourão, para que pedalar seja uma opção melhor para mais pessoas. Assine se você acredita que a mobilidade da cidade precisa considerar quem está sobre duas rodas.',
-        20, '2026-09-05 14:00:00', 3
+        20,
+        '2026-09-05 14:00:00',
+        3
     ),
     (
         'Lixeiras seletivas nas praças',
         'Ajude a tornar nossas praças mais limpas e a reciclagem mais acessível.',
         'Separar o lixo é mais fácil quando a cidade oferece condições para isso. Queremos pedir lixeiras identificadas para diferentes resíduos nas praças de Campo Mourão, acompanhadas de informação clara para quem usa esses espaços. Se você também quer ver as praças mais bem cuidadas, ajude a mostrar que essa mudança importa.',
-        10, '2026-09-20 09:00:00', 4
+        10,
+        '2026-09-20 09:00:00',
+        4
     ),
     (
         'Calçadas acessíveis no centro',
         'Ir e vir pela cidade é um direito de todos. Assine por caminhos sem barreiras.',
         'Circular pelo centro deveria ser tranquilo para todo mundo, inclusive pessoas com deficiência, idosos e quem empurra carrinho de bebê. Esta petição pede atenção às rampas, desníveis e obstáculos das calçadas de Campo Mourão. Sua assinatura ajuda a dar visibilidade a um problema que merece ser levado a sério.',
-        12, '2026-10-28 16:00:00', 7
+        12,
+        '2026-10-28 16:00:00',
+        7
+    ),
+    (
+        'Pontos de ônibus com cobertura',
+        'Ninguém deveria esperar o ônibus desprotegido do sol e da chuva.',
+        'Queremos pedir a instalação e a melhoria de abrigos nos pontos de ônibus de Campo Mourão, incluindo os da Vila Teixeira. Bancos, cobertura e acessibilidade fazem diferença para estudantes, trabalhadores e idosos que dependem do transporte coletivo todos os dias.',
+        20,
+        '2026-11-02 10:00:00',
+        3
+    ),
+    (
+        'Menos alagamentos no Jardim Veneza',
+        'A chuva não precisa virar um transtorno para quem mora no bairro.',
+        'Moradores já levaram ao poder público pedidos de melhorias na drenagem do Jardim Veneza. Queremos reforçar a necessidade de manutenção dos bueiros e avaliação dos pontos de alagamento, para que as famílias possam enfrentar os dias de chuva com mais tranquilidade.',
+        15,
+        '2026-11-04 14:30:00',
+        6
+    ),
+    (
+        'Descarte correto mais perto de casa',
+        'Vamos facilitar o destino certo para móveis velhos e outros resíduos.',
+        'Campo Mourão já possui um ponto de entrega voluntária, mas nem todo mundo tem facilidade para transportar objetos grandes. Pedimos mais divulgação dos locais de descarte e a avaliação de alternativas de coleta nos bairros, para evitar que móveis e entulhos terminem nos canteiros e terrenos.',
+        18,
+        '2026-11-06 09:00:00',
+        4
+    ),
+    (
+        'Mais lazer nas praças dos bairros',
+        'Brincar, conversar e se encontrar também fazem parte de uma cidade boa.',
+        'Queremos incentivar a instalação e manutenção de equipamentos de lazer nas praças dos bairros, como mesas para jogos, bancos e espaços para brincar. A ideia é que lugares como a Praça Alvorada e a Praça Japão sejam cada vez mais acolhedores para pessoas de todas as idades.',
+        12,
+        '2026-11-10 16:00:00',
+        2
+    ),
+    (
+        'Mais opções de ônibus aos fins de semana',
+        'A cidade também precisa estar ao alcance de quem não tem carro no domingo.',
+        'Quem depende do transporte coletivo precisa se deslocar também aos sábados, domingos e feriados. Queremos pedir uma avaliação dos horários e das necessidades dos passageiros nesses dias, considerando o acesso ao trabalho, ao lazer e aos serviços da cidade.',
+        20,
+        '2026-11-15 11:00:00',
+        7
+    ),
+    (
+        'Proteção das margens dos rios',
+        'Cuidar dos rios é cuidar da água e do futuro de Campo Mourão.',
+        'Queremos pedir atenção à conservação da vegetação nas margens do Rio do Campo e do Rio Mourão, com ações de monitoramento, recuperação onde necessário e prevenção do descarte de resíduos. Os rios fazem parte da cidade e merecem ser tratados como espaços vivos.',
+        16,
+        '2026-11-19 09:30:00',
+        5
     );
 
 -- 12. ASSINATURAS (26): todos os 20 voluntários assinam ao menos uma.

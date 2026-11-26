@@ -148,14 +148,14 @@
         credentials: "same-origin",
         headers: { Accept: "application/json" },
       });
+
+      console.log(resposta.status)
       if (resposta.status === 401) {
         location.href = "/login";
         return;
       }
       if (resposta.status === 409) {
         botao.textContent = "SOLICITAÇÃO JÁ REGISTRADA";
-        avisoEl.textContent =
-          "Você já tem uma solicitação para esta iniciativa.";
         return;
       }
       if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
@@ -233,13 +233,7 @@
     } else {
       botao.addEventListener("click", () => participar(id, botao));
     }
-
-    if (id === undefined || id === null) {
-      botao.disabled = true;
-      botao.title = "Iniciativa sem identificador";
-    } else {
-      botao.addEventListener("click", () => participar(id, botao));
-    }
+    
     corpo.append(botao);
     artigo.append(corpo);
     return artigo;
