@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urbanauta - Login</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urbanauta - Cadastro</title>
     <link rel="stylesheet" href="/global/index.css">
-    <link rel="stylesheet" href="/auth/auth.css">
-</head>
-<body class="auth-page">
+    <link rel="stylesheet" href="/auth/style.css">
+  </head>
+ <body class="auth-page">
 
     <main class="auth-layout">
 
@@ -36,16 +36,28 @@
             <div class="auth-container">
 
                 <span class="auth-eyebrow">
-                    ÁREA DO VOLUNTÁRIO / 01
+                    FAÇA PARTE / 02
                 </span>
 
-                <h2>BEM-VINDO DE VOLTA</h2>
+                <h2>CRIE SUA CONTA</h2>
 
                 <p class="auth-subtitle">
-                    Entre na sua conta para continuar participando.
+                    Seu primeiro passo para transformar a cidade.
                 </p>
 
                 <form id="loginForm" class="auth-form">
+
+                    <div class="auth-field">
+                        <label for="nome">NOME COMPLETO</label>
+                        <input
+                            type="text"
+                            name="nome"
+                            id="nome"
+                            placeholder="Como podemos te chamar?"
+                            autocomplete="name"
+                            required
+                        />
+                    </div>
 
                     <div class="auth-field">
                         <label for="email">E-MAIL</label>
@@ -65,24 +77,31 @@
                             type="password"
                             name="senha"
                             id="senha"
-                            placeholder="Digite sua senha"
-                            autocomplete="current-password"
+                            placeholder="Crie uma senha"
+                            autocomplete="new-password"
                             required
                         />
                     </div>
 
-                    <a href="/usuarios/recuperarSenha"
-                       class="auth-forgot">
-                        Esqueci minha senha
-                    </a>
+                    <div class="auth-field">
+                        <label for="senhaconf">CONFIRMAR SENHA</label>
+                        <input
+                            type="password"
+                            name="senhaconf"
+                            id="senhaconf"
+                            placeholder="Repita sua senha"
+                            autocomplete="new-password"
+                            required
+                        />
+                    </div>
 
                     <button type="submit" class="auth-submit">
-                        ENTRAR <span aria-hidden="true">→</span>
+                        CADASTRAR <span aria-hidden="true">→</span>
                     </button>
 
                     <p class="auth-switch">
-                        Ainda não tem conta?
-                        <a href="/cadastrar">Cadastre-se</a>
+                        Já tem uma conta?
+                        <a href="/login">Entrar</a>
                     </p>
 
                 </form>
@@ -91,6 +110,6 @@
 
     </main>
 
-    <script src="/auth/login.js"></script>
+    <script src="/auth/cadastrar.js"></script>
 </body>
 </html>

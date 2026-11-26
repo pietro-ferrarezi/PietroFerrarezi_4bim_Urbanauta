@@ -9,18 +9,18 @@ const __dirname = path.dirname(__filename);
 import authMiddleware  from "../Middleware/auth.js"
 
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "..", "Frontend", "Home", "index.html"))
+    res.sendFile(path.join(__dirname, "..", "..", "Frontend", "paginas", "Home", "index.html"))
 })
 
 router.get("/login", (req, res) => {
-    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "Auth", "login.html"))
+    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "paginas", "Auth", "login.html"))
 })
 router.get("/cadastrar", (req, res) => {
-    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "Auth", "cadastro.html"))
+    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "paginas" ,"Auth", "cadastro.html"))
 })
 
 router.get("/gerenciamento", authMiddleware, (req, res) => {
-    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "AreaColaborador", "colaborador.html"))
+    return res.sendFile(path.join(__dirname, "..", "..", "Frontend", "paginas" ,"AreaColaborador", "colaborador.html"))
 })
 
 export default router

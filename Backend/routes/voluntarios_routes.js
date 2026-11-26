@@ -15,11 +15,13 @@ router.get("/", authMiddleware, (req, res) => {
       "..",
       "..",
       "Frontend",
+      "paginas",
       "AreaVoluntario",
       "voluntario.html",
     ),
   );
 });
+
 router.get("/projetos", authMiddleware, (req, res) => {
   return res.sendFile(
     path.join(
@@ -27,12 +29,14 @@ router.get("/projetos", authMiddleware, (req, res) => {
       "..",
       "..",
       "Frontend",
+      "paginas",
       "AreaVoluntario",
       "projetos",
       "projetos_cat.html",
     ),
   );
 });
+
 router.get("/projetos/:id", authMiddleware, (req, res) => {
   return res.sendFile(
     path.join(
@@ -40,6 +44,7 @@ router.get("/projetos/:id", authMiddleware, (req, res) => {
       "..",
       "..",
       "Frontend",
+      "paginas",
       "AreaVoluntario",
       "projetos",
       "projeto.html",
@@ -54,12 +59,14 @@ router.get("/peticoes", authMiddleware, (req, res) => {
       "..",
       "..",
       "Frontend",
+      "paginas",
       "AreaVoluntario",
       "peticoes",
       "peticoes_cat.html",
     ),
   );
 });
+
 router.get("/peticoes/:id", authMiddleware, (req, res) => {
   return res.sendFile(
     path.join(
@@ -67,6 +74,7 @@ router.get("/peticoes/:id", authMiddleware, (req, res) => {
       "..",
       "..",
       "Frontend",
+      "paginas",
       "AreaVoluntario",
       "peticoes",
       "peticao.html",

@@ -16,7 +16,9 @@ router.get("/me", authMiddleware, async (req, res) => {
     await usuarioController.me(req, res)
 })
 
-router.post("/cadastro", usuarioController.cadastrarVoluntario);
+router.post("/cadastro", async (req, res) => {
+    await usuarioController.cadastrarVoluntario(req, res)
+});
 
 
 export default router
